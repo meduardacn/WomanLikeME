@@ -6,7 +6,9 @@
 //  Copyright © 2019 Maria Eduarda Casanova Nascimento. All rights reserved.
 //
 
-import XCTest
+import Quick
+import Nimble
+
 @testable import WomanLikeME
 
 class WomanLikeMETests: XCTestCase {

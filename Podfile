@@ -8,14 +8,11 @@ target 'WomanLikeME' do
   # Pods for WomanLikeME
 
   target 'WomanLikeMETests' do
-    inherit! :search_paths
     pod 'Quick'
     pod 'Nimble'
   end
 
   target 'WomanLikeMEUITests' do
-    inherit! :search_paths
-    # Pods for testing
     pod 'Quick'
     pod 'Nimble'
   end
