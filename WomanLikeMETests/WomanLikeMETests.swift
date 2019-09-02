@@ -11,26 +11,72 @@ import Nimble
 
 @testable import WomanLikeME
 
-class WomanLikeMETests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+final class Test: QuickSpec{
+    
+    override func spec() {
+        
+        // Scenario 1: A woman who open an app
+        //GIVEN
+        describe("A woman who uses the app"){
+            
+            //WHEN
+            context("the app is running"){
+                
+                //THEN
+                it("a story of a different woman is loaded"){
+                    
+                }
+                it("with a text about her"){
+                    
+                }
+                it("with an image"){
+                    
+                }
+            }
         }
+        
+        // Scenario 2: Favorite a story
+        //GIVEN
+        describe("A woman who favorite a story"){
+            
+            //WHEN
+            context("a story that is favorited"){
+                
+                //THEN
+                it("a story is saved to a favorite list"){
+                    
+                }
+            }
+        }
+        
+        // Scenario 3: Didn't favorite a story and access a favorite list
+        //GIVEN
+        describe("A woman who didn't favorited a story yet"){
+            
+            //WHEN
+            context("the favorite list is accessed"){
+                
+                //THEN
+                it("the list is empty"){
+                    
+                }
+            }
+        }
+        
+        // Scenario 4: Did Favorite a story and access a favorite list
+        //GIVEN
+        describe("A woman who favorited a story"){
+            
+            //WHEN
+            context("the favorite list is acessed"){
+                
+                //THEN
+                it("the list contains all the favorites stories"){
+                    
+                }
+            }
+        }
+        
+        
     }
-
 }
