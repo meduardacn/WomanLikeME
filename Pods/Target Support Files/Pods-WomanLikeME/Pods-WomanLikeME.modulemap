@@ -1,0 +1,6 @@
+framework module Pods_WomanLikeME {
+  umbrella header "Pods-WomanLikeME-umbrella.h"
+
+  export *
+  module * { export * }
+}
