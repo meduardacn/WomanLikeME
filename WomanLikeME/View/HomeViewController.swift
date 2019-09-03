@@ -69,7 +69,7 @@ extension  HomeViewController : HomeViewDelegate {
     }
     
     internal func setImage(imageData: Data) {
-        let img = UIImage(data: imageData)
-        image = UIImageView(image: img)
+        image.image = UIImage(data: imageData)
+        
     }
 }
