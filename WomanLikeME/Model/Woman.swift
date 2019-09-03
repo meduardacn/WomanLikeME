@@ -9,16 +9,15 @@
 import Foundation
 
 struct Woman{
-    let tweetText : String
     let name : String
     let date : Date
     let carrer : String
     let textAbout : String
     let image : Data
     let phrase : String
+    let saved : Bool = false
     
-    init(tweetText : String, name : String, date : Date, carrer : String, textAbout : String, image : Data, phrase : String) {
-        self.tweetText = tweetText
+    init(name : String, date : Date, carrer : String, textAbout : String, image : Data, phrase : String) {
         self.name = name
         self.date = date
         self.carrer = carrer

@@ -18,18 +18,12 @@ final class Test: QuickSpec{
         // Scenario 1: A woman who open an app
         //GIVEN
         describe("A woman who uses the app"){
-            
+            let woman = W
             //WHEN
             context("the app is running"){
                 
                 //THEN
-                it("a story of a different woman is loaded"){
-                    
-                }
-                it("with a text about her"){
-                    
-                }
-                it("with an image"){
+                it("a story of a different woman is loaded AND with a text about her AND with an image"){
                     
                 }
             }
