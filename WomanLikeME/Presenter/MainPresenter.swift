@@ -8,16 +8,26 @@
 
 import Foundation
 
-class MainPresenter{
-    let womanOftheday : Woman
+final class HomePresenter{
+    private let view: HomeViewDelegate
+    private let model : Woman
     
-    init(woman : Woman) {
-        self.womanOftheday = woman
+    required init(view: HomeViewDelegate, model: Woman) {
+        self.view = view
+        self.model = model
+    }
+
+    func initPhraseLabel(){
+        view.setPhrase(phrase: model.phrase)
     }
     
+    
+    
+    
+    
     func getData() -> [String]{
-        let data : [String] = []
-        data.append(womanOftheday.phrase)
+        var data : [String] = []
+       // data.append(womanOftheday.phrase)
         return data
     }
     
