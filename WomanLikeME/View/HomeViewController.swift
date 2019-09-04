@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -18,9 +19,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var fullPhraseLabel: UILabel!
     @IBOutlet weak var scrolView: UIScrollView!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var phraseView: UIView!
     
-    private var presenter: HomePresenter?
-    private var model: Woman?
+  //  var presenter = MainPresenter()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +34,19 @@ class HomeViewController: UIViewController {
     }
     func setLayout(){
         scrolView.bounces = false
+        //tentando colocar a sombra, sem sucesso
+        phraseView.layer.shadowColor = UIColor.black.cgColor
+        phraseView.layer.shadowOpacity = 0.2
+        phraseView.layer.shadowOffset = CGSize(width: 3, height: 2)
     }
     private func initialize(){
         model  = Woman()
         presenter = HomePresenter(view: self, model: model!)
     }
+        
+        
     
+    }
     
     func inicializeScreen(){
         

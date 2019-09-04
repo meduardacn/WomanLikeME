@@ -1,6 +1,12 @@
+////
+////  MainPresenter.swift
+////  WomanLikeME
+////
+////  Created by Maria Eduarda Casanova Nascimento on 03/09/19.
+////  Copyright © 2019 Maria Eduarda Casanova Nascimento. All rights reserved.
+////
 //
-//  MainPresenter.swift
-//  WomanLikeME
+//import Foundation
 //
 //  Created by Maria Eduarda Casanova Nascimento on 03/09/19.
 //  Copyright © 2019 Maria Eduarda Casanova Nascimento. All rights reserved.
