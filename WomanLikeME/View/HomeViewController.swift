@@ -46,11 +46,9 @@ class HomeViewController: UIViewController {
         
         
     
-    }
+}
     
-    func inicializeScreen(){
-        
-    }
+    
 
     /*
     // MARK: - Navigation
