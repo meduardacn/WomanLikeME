@@ -24,7 +24,8 @@ import Foundation
 final class HomePresenter {
     private let view: HomeViewDelegate
     private var model : Woman
-    var currentDate = Date()
+  
+    var transform = DateTransformation()
     
     required init(view: HomeViewDelegate, model: Woman) {
         self.view = view
@@ -39,7 +40,7 @@ final class HomePresenter {
         view.setName(name: model.name)
     }
     func initAgeLabel(){
-        let age = ageCalculator(date: model.date)
+        let age = transform.ageCalculator(date: model.date)
         view.setAge(age: age)
     }
     func initJobLabel(){
@@ -70,25 +71,6 @@ final class HomePresenter {
         }
     }
     
-    func transformDate(from string: String) -> Date? {
-        let womanDate = string.split(separator: "/")
-        let day = womanDate[0]
-        let month = womanDate[1]
-        let year = womanDate[2]
-        
-        let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "YYYY-MM-dd"
-        return dateFormater.date(from: "\(year)-\(month)-\(day)")
-    }
     
-    func ageCalculator(date: String) -> String{
-        let birthDate = transformDate(from: date)
-        let calender = Calendar.current
-        let dateComponent = calender.dateComponents([.year, .month, .day], from:
-            birthDate!, to: currentDate)
-        //return (dateComponent.year!, dateComponent.month!, dateComponent.day!)
-        //print("\(age.0) Year, \(age.1) Month, \(age.2) Day")
-        return String(dateComponent.year!)
-    }
     
 }

@@ -18,7 +18,6 @@ final class Test: QuickSpec{
         // Scenario 1: A woman who open an app
         //GIVEN
         describe("A woman who uses the app"){
-            let user = User()
             //WHEN
             context("the app is running"){
                 // pegar do banco
@@ -74,5 +73,51 @@ final class Test: QuickSpec{
         }
         
         
+        
+        
     }
 }
+
+
+final class Test2: QuickSpec{
+    override  func spec() {
+        // Scenario :
+        // GIVEN
+        describe("GIVEN "){
+            
+            // WHEN
+            context("WHEN "){
+                
+                // THEN
+                it("THEN "){
+                    
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+final class TestDateTransformation: QuickSpec{
+    override func spec() {
+    // Scenario : A woman born in 1989 is loaded
+    //GIVEN
+        describe("GIVEN a woman born in 20/02/1989"){
+            let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: false)
+            //WHEN
+                context("WHEN her story is loaded in 04/09/2019"){
+                let transform = DateTransformation()
+                
+                //THEN
+                it("THEN her age should be 30"){
+                    let date = transform.ageCalculator(date: newWoman.date)
+                    expect(date).to(equal("30"))
+                }
+            }
+        }
+    }
+
+}
+
