@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
     
     }
     
-    func setScreen(){
+    func inicializeScreen(){
         
     }
 
@@ -52,4 +52,32 @@ class HomeViewController: UIViewController {
     }
     */
 
+}
+
+extension  HomeViewController : HomeViewDelegate {
+    internal func setPhrase(phrase: String) {
+        phraseLabel.text = phrase
+        fullPhraseLabel.text = phrase
+    }
+    
+    internal func setName(name: String) {
+        nameLabel.text = name
+    }
+    
+    internal func setAge(age: String) {
+        ageLabel.text = age
+    }
+    
+    internal func setJob(job: String) {
+        jobLabel.text = job
+    }
+    
+    internal func setText(text: String) {
+        textLabel.text = text
+    }
+    
+    internal func setImage(imageData: Data) {
+        image.image = UIImage(data: imageData)
+        
+    }
 }
