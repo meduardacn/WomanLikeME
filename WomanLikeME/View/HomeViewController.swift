@@ -21,8 +21,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var phraseView: UIView!
     
-  //  var presenter = MainPresenter()
-    
+//    private var presenter = HomePresenter?
+//    private var model = Woman!
+   
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -30,7 +31,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        initialize()
+        //initialize()
     }
     func setLayout(){
         scrolView.bounces = false
@@ -39,16 +40,16 @@ class HomeViewController: UIViewController {
         phraseView.layer.shadowOpacity = 0.2
         phraseView.layer.shadowOffset = CGSize(width: 3, height: 2)
     }
-    private func initialize(){
-        model  = Woman()
-        presenter = HomePresenter(view: self, model: model!)
-    }
-        
+//    private func initialize(){
+//        model  = Woman()
+//        presenter = HomePresenter(view: self, model: model!)
+//    }
+    
         
     
 }
     
-    
+
 
     /*
     // MARK: - Navigation
@@ -59,9 +60,6 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
-
 // MARK: HomeViewDelegate
 extension  HomeViewController : HomeViewDelegate {
     internal func setPhrase(phrase: String) {

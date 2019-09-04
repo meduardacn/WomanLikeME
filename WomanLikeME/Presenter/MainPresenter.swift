@@ -31,10 +31,9 @@ final class HomePresenter{
     
     
     
-    func getData() -> [String]{
-        var data : [String] = []
-       // data.append(womanOftheday.phrase)
-        return data
-    }
+//    func getData() -> [HomePresenter  var data : [String] = []
+//       // data.append(womanOftheday.phrase)
+//        return data
+//    }
     
 }
