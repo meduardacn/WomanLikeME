@@ -13,9 +13,12 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    //var allWomen: [Woman] = []
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //preloadData()
         // Override point for customization after application launch.
         return true
     }
@@ -43,6 +46,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+//    func preloadData() {
+//        let preloadedDataKey = "didPreloadData"
+//
+//
+//        let userDefaults = UserDefaults.standard
+//
+//        if userDefaults.bool(forKey: preloadedDataKey) == false {
+//        guard let urlPath = Bundle.main.url(forResource: "WomanLikeME", withExtension: "plist") else {
+//            return
+//        }
+//
+//        if let arrayContents = NSMutableArray(contentsOf: urlPath) as? [[Any]] {
+//            for woman in arrayContents {
+//                print(woman)
+//                let womanModel = Woman(name: woman[0] as! String, date: woman[1] as! String, carrer: woman[2] as! String, textAbout: woman[3] as! String, image: woman[4] as! String, phrase: woman[5] as! String, saved: woman[6] as! Bool)
+//                allWomen.append(womanModel)
+//            }
+//        }
+//
+//            userDefaults.set(true, forKey: preloadedDataKey)
+//        }
+//
+//    }
 
     // MARK: - Core Data stack
 
