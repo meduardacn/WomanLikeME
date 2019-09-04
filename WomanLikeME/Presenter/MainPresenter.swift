@@ -14,9 +14,17 @@
 
 import Foundation
 
-final class HomePresenter{
+//let presenter = HomePresenter()
+//presenter.currentDate = presenter.transformDate(from: "24/01/1989")
+//...
+//
+//presenter.ageCalculator("24/01/2019")
+
+
+final class HomePresenter {
     private let view: HomeViewDelegate
     private var model : Woman
+    var currentDate = Date()
     
     required init(view: HomeViewDelegate, model: Woman) {
         self.view = view
@@ -58,19 +66,23 @@ final class HomePresenter{
            view.favorite(image: "favorited")
         }
     }
-    func ageCalculator(date: String) -> String{
-        let womanDate = date.split(separator: "/")
+    
+    func transformDate(from string: String) -> Date? {
+        let womanDate = string.split(separator: "/")
         let day = womanDate[0]
         let month = womanDate[1]
         let year = womanDate[2]
         
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "YYYY-MM-dd"
-        let dateOfBirth = dateFormater.date(from: "\(year)-\(month)-\(day)")
-        
+        return dateFormater.date(from: "\(year)-\(month)-\(day)")
+    }
+    
+    func ageCalculator(date: String) -> String{
+        let birthDate = transformDate(from: date)
         let calender = Calendar.current
         let dateComponent = calender.dateComponents([.year, .month, .day], from:
-            dateOfBirth!, to: Date())
+            birthDate!, to: currentDate)
         //return (dateComponent.year!, dateComponent.month!, dateComponent.day!)
         //print("\(age.0) Year, \(age.1) Month, \(age.2) Day")
         return String(dateComponent.year!)
