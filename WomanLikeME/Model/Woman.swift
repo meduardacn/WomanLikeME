@@ -15,14 +15,13 @@ struct Woman {
     let textAbout : String
     let image : String
     let phrase : String
-    var saved : Bool = false
     var saved : Bool
     init(){
         self.name = ""
         self.date = ""
         self.carrer = ""
         self.textAbout = ""
-        self.image = Data(count: 0)
+        self.image = ""
         self.phrase = ""
         self.saved = false
     }
