@@ -15,7 +15,7 @@ struct Woman{
     let textAbout : String
     let image : Data
     let phrase : String
-    let saved : Bool = false
+    var saved : Bool = false
     
     init(){
         self.name = ""
