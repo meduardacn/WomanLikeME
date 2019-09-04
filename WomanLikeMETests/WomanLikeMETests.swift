@@ -14,22 +14,6 @@ import Nimble
 final class Test: QuickSpec{
     
     override func spec() {
-        
-        // Scenario 1: A woman who open an app
-        //GIVEN
-        describe("A woman who uses the app"){
-            //WHEN
-            context("the app is running"){
-                // pegar do banco
-                //THEN
-                it("a story of a different woman is loaded AND with a text about her AND with an image"){
-//                    let newWoman = Woman(name: <#T##String#>, date: <#T##String#>, carrer: <#T##String#>, textAbout: <#T##String#>, image: <#T##Data#>, phrase: <#T##String#>)
-//                    expect(newWoman.text).to(notEqual(""))
-//                    expect(newWoman.image).to(notHaveCount(0))
-                }
-            }
-        }
-        
         // Scenario 2: Favorite a story
         //GIVEN
         describe("A woman who favorite a story"){
@@ -71,34 +55,54 @@ final class Test: QuickSpec{
                 }
             }
         }
-        
-        
-        
-        
     }
 }
 
+final class TestNotEmpty: QuickSpec{
+    override func spec() {
+        // Scenario: When a woman is loaded all informatios aren't empty
+        //GIVEN
+        describe("GIVEN A woman who uses the app"){
+            //WHEN
+            context("WHEN the app is running"){
+                let database = ReadingPList()
+                let allWoman = database.returningData()
+                let first = allWoman[0]
+                //THEN
+                it("THEN a story of woman is loaded AND with a not empty text about her AND with a not empty name AND with a not empty date AND with a not empty carrer AND with a not empty phrase AND with an valid image "){
+                    let newWoman = Woman(name: first.name, date: first.date, carrer: first.carrer, textAbout: first.textAbout, image: first.image, phrase: first.phrase, saved: first.saved)
+                    expect(newWoman.textAbout).toNot(be(""))
+                    expect(newWoman.name).toNot(be(""))
+                    expect(newWoman.date).toNot(be(""))
+                    expect(newWoman.carrer).toNot(be(""))
+                    expect(newWoman.phrase).toNot(be(""))
+                    let image = Data(base64Encoded: newWoman.image)
+                    expect(image).toNot(haveCount(0))
+                }
+            }
+        }
+    }
+}
 
-final class Test2: QuickSpec{
+final class TestLoadAllDataPlist: QuickSpec{
     override  func spec() {
-        // Scenario :
+        // Scenario : When database is not empty all stories are loaded from
         // GIVEN
-        describe("GIVEN "){
+        describe("GIVEN WomanLikeME"){
             
             // WHEN
-            context("WHEN "){
-                
+            context("WHEN it is loaded"){
+                let database = ReadingPList()
                 // THEN
-                it("THEN "){
-                    
+                it("THEN a list of all woman in database is loaded"){
+                    let allWoman = database.returningData()
+                    expect(allWoman).toNot(beEmpty())
                 }
             }
             
         }
     }
 }
-
-
 
 final class TestDateTransformation: QuickSpec{
     override func spec() {
