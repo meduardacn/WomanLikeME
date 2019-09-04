@@ -18,13 +18,15 @@ final class Test: QuickSpec{
         // Scenario 1: A woman who open an app
         //GIVEN
         describe("A woman who uses the app"){
-            let woman = W
+            let user = User()
             //WHEN
             context("the app is running"){
-                
+                // pegar do banco
                 //THEN
                 it("a story of a different woman is loaded AND with a text about her AND with an image"){
-                    
+//                    let newWoman = Woman(name: <#T##String#>, date: <#T##String#>, carrer: <#T##String#>, textAbout: <#T##String#>, image: <#T##Data#>, phrase: <#T##String#>)
+//                    expect(newWoman.text).to(notEqual(""))
+//                    expect(newWoman.image).to(notHaveCount(0))
                 }
             }
         }

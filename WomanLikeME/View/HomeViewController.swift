@@ -8,8 +8,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
+final class HomeViewController: UIViewController {
+    // MARK: IBOutlet
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -21,70 +21,55 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var phraseView: UIView!
     
-//    private var presenter = HomePresenter?
-//    private var model = Woman!
+    private var presenter: HomePresenter?
+    private var model: Woman!
    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        //initialize()
+        initialize()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     func setLayout(){
         scrolView.bounces = false
-        //tentando colocar a sombra, sem sucesso
-        phraseView.layer.shadowColor = UIColor.black.cgColor
-        phraseView.layer.shadowOpacity = 0.2
-        phraseView.layer.shadowOffset = CGSize(width: 3, height: 2)
     }
-//    private func initialize(){
-//        model  = Woman()
-//        presenter = HomePresenter(view: self, model: model!)
-//    }
-    
-        
+    private func initialize(){
+        model  = Woman()
+        presenter = HomePresenter(view: self, model: model)
+    }
+    @IBAction func onFavorite(_ sender: Any) {
+        presenter?.onFavorite()
+    }
     
 }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 // MARK: HomeViewDelegate
 extension  HomeViewController : HomeViewDelegate {
+    internal func favorite(image: String) {
+        favoriteButton.imageView?.image = UIImage(named: image)
+    }
     internal func setPhrase(phrase: String) {
         phraseLabel.text = phrase
         fullPhraseLabel.text = phrase
     }
-    
     internal func setName(name: String) {
         nameLabel.text = name
     }
-    
     internal func setAge(age: String) {
         ageLabel.text = age
     }
-    
     internal func setJob(job: String) {
         jobLabel.text = job
     }
-    
     internal func setText(text: String) {
         textLabel.text = text
     }
-    
     internal func setImage(imageData: Data) {
         image.image = UIImage(data: imageData)
         
+    }
+    internal func setFavoriteImage(image: String){
+        favoriteButton.imageView?.image = UIImage(named: image)
     }
 }
