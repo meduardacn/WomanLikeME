@@ -15,7 +15,18 @@ struct Woman {
     let textAbout : String
     let image : String
     let phrase : String
-    let saved : Bool
+    var saved : Bool
+    init(){
+        self.name = ""
+        self.date = ""
+        self.carrer = ""
+        self.textAbout = ""
+        self.image = ""
+        self.phrase = ""
+        self.saved = false
+    }
+    
+    
     
     init(name : String, date : String, carrer : String, textAbout : String, image : String, phrase : String, saved : Bool) {
         self.name = name
