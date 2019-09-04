@@ -10,14 +10,23 @@ import Foundation
 
 struct Woman{
     let name : String
-    let date : Date
+    let date : String
     let carrer : String
     let textAbout : String
     let image : Data
     let phrase : String
     let saved : Bool = false
     
-    init(name : String, date : Date, carrer : String, textAbout : String, image : Data, phrase : String) {
+    init(){
+        self.name = ""
+        self.date = ""
+        self.carrer = ""
+        self.textAbout = ""
+        self.image = Data(count: 0)
+        self.phrase = ""
+    }
+    
+    init(name : String, date : String, carrer : String, textAbout : String, image : Data, phrase : String) {
         self.name = name
         self.date = date
         self.carrer = carrer

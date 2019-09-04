@@ -19,15 +19,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrolView: UIScrollView!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    var presenter: HomePresenter?
+    private var presenter: HomePresenter?
+    private var model: Woman?
     
     override func viewDidLoad() {
-        scrolView.bounces = false
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setLayout()
+        initialize()
     }
-    
+    func setLayout(){
+        scrolView.bounces = false
+    }
+    private func initialize(){
+        model  = Woman()
+        presenter = HomePresenter(view: self, model: model!)
+    }
     
     
     func inicializeScreen(){
@@ -46,6 +52,7 @@ class HomeViewController: UIViewController {
 
 }
 
+// MARK: HomeViewDelegate
 extension  HomeViewController : HomeViewDelegate {
     internal func setPhrase(phrase: String) {
         phraseLabel.text = phrase
