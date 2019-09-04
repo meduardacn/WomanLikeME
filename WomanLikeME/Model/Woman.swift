@@ -8,21 +8,22 @@
 
 import Foundation
 
-struct Woman{
+struct Woman {
     let name : String
-    let date : Date
+    let date : String
     let carrer : String
     let textAbout : String
-    let image : Data
+    let image : String
     let phrase : String
-    let saved : Bool = false
+    let saved : Bool
     
-    init(name : String, date : Date, carrer : String, textAbout : String, image : Data, phrase : String) {
+    init(name : String, date : String, carrer : String, textAbout : String, image : String, phrase : String, saved : Bool) {
         self.name = name
         self.date = date
         self.carrer = carrer
         self.textAbout = textAbout
         self.image = image
         self.phrase = phrase
+        self.saved = saved
     }
 }

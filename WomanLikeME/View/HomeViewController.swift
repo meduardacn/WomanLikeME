@@ -19,11 +19,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var scrolView: UIScrollView!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    //var readingPList: ReadingPList?
+    
     var presenter: HomePresenter?
     
     override func viewDidLoad() {
         scrolView.bounces = false
         super.viewDidLoad()
+        
+//        let allWomen = readingPList?.returningData()
+//        print(allWomen)
+        
 
         // Do any additional setup after loading the view.
     }
