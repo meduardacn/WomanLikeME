@@ -27,6 +27,8 @@
 		7415A6472175269B9FC0D9F2 /* Pods_WomanLikeMETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69241AC0D6DBBFF7B6B36E8 /* Pods_WomanLikeMETests.framework */; };
 		8707E0E322F6D682D25D9656 /* Pods_WomanLikeME.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A17436102C0820A823ECCB3 /* Pods_WomanLikeME.framework */; };
 		DF024B2FDF231C9F060F08B2 /* Pods_WomanLikeMEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8C1C80B1F820CDBEAD04D3 /* Pods_WomanLikeMEUITests.framework */; };
+		F225D8F6231F0ED800F31BCC /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225D8F5231F0ED800F31BCC /* FavoriteViewController.swift */; };
+		F225D8F8231F106000F31BCC /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F225D8F7231F106000F31BCC /* FavoriteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		A605E70D806AE5149D5DA5EA /* Pods-WomanLikeME.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WomanLikeME.release.xcconfig"; path = "Target Support Files/Pods-WomanLikeME/Pods-WomanLikeME.release.xcconfig"; sourceTree = "<group>"; };
 		C69241AC0D6DBBFF7B6B36E8 /* Pods_WomanLikeMETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WomanLikeMETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9402622878ADCA0233B3E75 /* Pods-WomanLikeMETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WomanLikeMETests.debug.xcconfig"; path = "Target Support Files/Pods-WomanLikeMETests/Pods-WomanLikeMETests.debug.xcconfig"; sourceTree = "<group>"; };
+		F225D8F5231F0ED800F31BCC /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		F225D8F7231F106000F31BCC /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 				601DC1C4231D922400004C4B /* LaunchScreen.storyboard */,
 				601DC1BA231D922300004C4B /* ViewController.swift */,
 				606A6E06231ED74A00109063 /* HomeViewController.swift */,
+				F225D8F5231F0ED800F31BCC /* FavoriteViewController.swift */,
+				F225D8F7231F106000F31BCC /* FavoriteTableViewCell.swift */,
 				601DC1BC231D922300004C4B /* Main.storyboard */,
 			);
 			path = View;
@@ -463,8 +469,10 @@
 				606A6E04231ED29500109063 /* Woman.swift in Sources */,
 				606A6E0A231EDCAE00109063 /* User.swift in Sources */,
 				601DC1BB231D922300004C4B /* ViewController.swift in Sources */,
+				F225D8F8231F106000F31BCC /* FavoriteTableViewCell.swift in Sources */,
 				601DC1B9231D922300004C4B /* AppDelegate.swift in Sources */,
 				606A6E10231EF4E400109063 /* MainPresenter.swift in Sources */,
+				F225D8F6231F0ED800F31BCC /* FavoriteViewController.swift in Sources */,
 				601DC1C1231D922300004C4B /* WomanLikeME.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
