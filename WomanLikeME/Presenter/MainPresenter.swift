@@ -1,12 +1,6 @@
-////
-////  MainPresenter.swift
-////  WomanLikeME
-////
-////  Created by Maria Eduarda Casanova Nascimento on 03/09/19.
-////  Copyright © 2019 Maria Eduarda Casanova Nascimento. All rights reserved.
-////
 //
-//import Foundation
+//  MainPresenter.swift
+//  WomanLikeME
 //
 //  Created by Maria Eduarda Casanova Nascimento on 03/09/19.
 //  Copyright © 2019 Maria Eduarda Casanova Nascimento. All rights reserved.
@@ -14,13 +8,17 @@
 
 import Foundation
 
-final class HomePresenter{
+final class HomePresenter {
     private let view: HomeViewDelegate
     private var model : Woman
+    private var user : User
+  
+    var transform = DateTransformation()
     
     required init(view: HomeViewDelegate, model: Woman) {
         self.view = view
         self.model = model
+        user = User()
     }
 
     // MARK: Init IBOutlets
@@ -31,7 +29,7 @@ final class HomePresenter{
         view.setName(name: model.name)
     }
     func initAgeLabel(){
-        let age = ageCalculator(date: model.date)
+        let age = transform.ageCalculator(date: model.date)
         view.setAge(age: age)
     }
     func initJobLabel(){
@@ -41,39 +39,34 @@ final class HomePresenter{
         view.setText(text: model.textAbout)
     }
     func initImage(){
-        view.setImage(imageData: model.image)
+        if let data = Data(base64Encoded: model.image){
+            view.setImage(imageData: data)
+        }
+        
     }
     func initFavorite(){
+        if model.saved{
+            view.setFavoriteImage(image: "favFullWhiteButton")
+        }else{
+             view.setFavoriteImage(image:"favWhiteButton")
+        }
+            
         
     }
     
     // MARK: Other functions
     func onFavorite(){
         if model.saved{
+            model.saved = false
             //  excluir das  salvas
-            view.favorite(image: "NotFavorited")
+            view.setFavoriteImage(image: "favWhiteButton")
         }else{
             model.saved = true
             //  adicionar nas  salvas
-           view.favorite(image: "favorited")
+           view.setFavoriteImage(image: "favFullWhiteButton")
         }
     }
-    func ageCalculator(date: String) -> String{
-        let womanDate = date.split(separator: "/")
-        let day = womanDate[0]
-        let month = womanDate[1]
-        let year = womanDate[2]
-        
-        let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "YYYY-MM-dd"
-        let dateOfBirth = dateFormater.date(from: "\(year)-\(month)-\(day)")
-        
-        let calender = Calendar.current
-        let dateComponent = calender.dateComponents([.year, .month, .day], from:
-            dateOfBirth!, to: Date())
-        //return (dateComponent.year!, dateComponent.month!, dateComponent.day!)
-        //print("\(age.0) Year, \(age.1) Month, \(age.2) Day")
-        return String(dateComponent.year!)
-    }
+    
+    
     
 }
