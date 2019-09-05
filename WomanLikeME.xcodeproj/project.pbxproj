@@ -16,6 +16,9 @@
 		601DC1D1231D922500004C4B /* WomanLikeMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601DC1D0231D922500004C4B /* WomanLikeMETests.swift */; };
 		601DC1DC231D922500004C4B /* WomanLikeMEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601DC1DB231D922500004C4B /* WomanLikeMEUITests.swift */; };
 		601DC1EA231D927E00004C4B /* File in Resources */ = {isa = PBXBuildFile; fileRef = 601DC1E9231D927E00004C4B /* File */; };
+		60678A2623217AB600F032CA /* DateTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E172320512100109063 /* DateTransformation.swift */; };
+		60678A2723217AEA00F032CA /* ReadingPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E315023203D2F00D9B581 /* ReadingPList.swift */; };
+		60678A2823217AFE00F032CA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* HomePresenter.swift */; };
 		606A6E04231ED29500109063 /* Woman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E03231ED29500109063 /* Woman.swift */; };
 		606A6E05231ED29500109063 /* Woman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E03231ED29500109063 /* Woman.swift */; };
 		606A6E07231ED74A00109063 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E06231ED74A00109063 /* HomeViewController.swift */; };
@@ -23,7 +26,6 @@
 		606A6E0A231EDCAE00109063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E09231EDCAE00109063 /* User.swift */; };
 		606A6E0B231EDCAE00109063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E09231EDCAE00109063 /* User.swift */; };
 		606A6E10231EF4E400109063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* HomePresenter.swift */; };
-		606A6E11231EF4E400109063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* HomePresenter.swift */; };
 		606A6E14231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E15231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E182320512100109063 /* DateTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E172320512100109063 /* DateTransformation.swift */; };
@@ -518,12 +520,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				606A6E11231EF4E400109063 /* HomePresenter.swift in Sources */,
+				60678A2623217AB600F032CA /* DateTransformation.swift in Sources */,
 				606A6E15231EFD7500109063 /* HomeViewProtocol.swift in Sources */,
+				60678A2723217AEA00F032CA /* ReadingPList.swift in Sources */,
 				606A6E0B231EDCAE00109063 /* User.swift in Sources */,
 				606A6E05231ED29500109063 /* Woman.swift in Sources */,
 				601DC1D1231D922500004C4B /* WomanLikeMETests.swift in Sources */,
 				606A6E08231ED74A00109063 /* HomeViewController.swift in Sources */,
+				60678A2823217AFE00F032CA /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
