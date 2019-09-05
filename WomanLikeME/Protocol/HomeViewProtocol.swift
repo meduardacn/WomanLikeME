@@ -9,7 +9,6 @@
 import Foundation
 
 protocol HomeViewDelegate : class {
-    func favorite(image: String)
     func setPhrase(phrase: String)
     func setName(name: String)
     func setAge(age: String)

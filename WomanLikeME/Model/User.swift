@@ -9,8 +9,14 @@
 import Foundation
 
 struct User{
-    private var listOfFavorited : [Woman] = []
+    private var allWoman : [Woman]
+    private var listOfFavorited : [Woman]
     
+    init() {
+        let database = ReadingPList()
+        allWoman = database.returningData()
+        listOfFavorited  = allWoman.filter { $0.saved }
+    }
     mutating func addWoman(new: Woman){
         listOfFavorited.append(new)
     }
