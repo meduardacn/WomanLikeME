@@ -79,8 +79,6 @@ class CoreDataCoordinator {
         
         let fetchedWomen = try? container.viewContext.fetch(womanFetch) as? [Woman]
         return fetchedWomen ?? []
-        
-        return []
     }
     
     func fetchWomanOfTheDay() -> Woman? {
@@ -94,20 +92,22 @@ class CoreDataCoordinator {
         womanFetch.predicate = NSPredicate(format: "dateAppeared == %@", currentDate)
         
         do {
-            var fetchedWomen = try container.viewContext.fetch(womanFetch) as? [Woman]
+            var fetchedWomen = try container.viewContext.fetch(womanFetch) as? [Woman] ?? []
             
-            if fetchedWomen!.isEmpty {
+            if fetchedWomen.isEmpty {
                 let womanFetchAppeared = NSFetchRequest<NSFetchRequestResult>(entityName: "Woman")
                 womanFetchAppeared.predicate = NSPredicate(format: "appeared == false")
-                fetchedWomen = try container.viewContext.fetch(womanFetchAppeared) as? [Woman]
+                fetchedWomen = try (container.viewContext.fetch(womanFetchAppeared) as? [Woman])!
                 
-                let fetchedWoman = fetchedWomen?.first
+                let fetchedWoman = fetchedWomen.first
                 fetchedWoman?.appeared = true
                 fetchedWoman?.dateAppeared = currentDate
                 saveChanges()
+                
+                return fetchedWoman
             }
             
-            return fetchedWomen?.first
+            return fetchedWomen.first
         } catch {
             print(error)
         }

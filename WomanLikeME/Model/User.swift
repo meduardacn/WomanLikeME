@@ -10,25 +10,26 @@ import Foundation
 
 struct User{
     private var allWoman : [Woman]
-    private var listOfFavorited : [Woman]
-    
+    private let database = CoreDataCoordinator()
+
     init() {
-        let database = ReadingPList()
-        allWoman = database.returningData()
-        listOfFavorited  = allWoman.filter { $0.saved }
-    }
-    mutating func addWoman(new: Woman){
-        listOfFavorited.append(new)
-    }
-    mutating func deleteWoman(new: Woman){
-        listOfFavorited.removeAll { $0.id == new.id }
-    }
-    func getListOfFAvorite() -> [Woman] {
-        return listOfFavorited
+        allWoman = database.fetchAllWoman()
     }
     
-    func womanOftheDay() -> Woman{
-        return Woman(name: "Bruna", date: "07/10/1998", carrer: "Estudante", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.  Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.  Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.  Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.  Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.  Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.  Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. ", image: "DaniBraguini", phrase: "nunca vi ninguem", saved: false, id: 0)
+    mutating func addWoman(new: Woman){
+        database.saveChanges()
+    }
+    
+    mutating func deleteWoman(new: Woman){
+        database.saveChanges()
+    }
+    
+    func getListOfFAvorite() -> [Woman] {
+        return database.fetchFavoritedWomen()
+    }
+    
+    func womanOftheDay() -> Woman? {
+        return database.fetchWomanOfTheDay()
     }
     
 }

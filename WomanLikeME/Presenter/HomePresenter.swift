@@ -18,7 +18,7 @@ final class HomePresenter {
     required init(view: HomeViewDelegate) {
         self.view = view
         user = User()
-        model = user.womanOftheDay()
+        model = user.womanOftheDay()!
     }
 
     // MARK: Init IBOutlets
