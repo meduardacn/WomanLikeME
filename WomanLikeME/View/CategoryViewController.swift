@@ -13,10 +13,12 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var titleView: UIView!
     
+    private var presenter : CategoryPresenter?
     let categories = Category()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = CategoryPresenter(view: self)
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
@@ -25,9 +27,7 @@ class CategoryViewController: UIViewController {
         titleView.layer.shadowColor = UIColor.black.cgColor
         titleView.layer.shadowOpacity = 0.2
         titleView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        
     }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -47,9 +47,14 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         cell.backView.layer.shadowOffset = CGSize(width: 2, height: 0)
         cell.backView.layer.shadowRadius = 6
         
-        cell.categoryImageView.image = UIImage(named: "category\(indexPath[1])")
-        cell.categoryLabel.text = "\(categories.categories[indexPath[1]])"
+        
+        cell.categoryImageView.image = UIImage(named: (presenter?.getImage(index: indexPath[1]))! )
+        cell.categoryLabel.text = presenter?.getLabel(index: indexPath[1])
         
         return cell
     }
+}
+
+extension CategoryViewController : CategoryViewDelegate{
+    
 }
