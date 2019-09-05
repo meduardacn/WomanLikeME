@@ -23,9 +23,10 @@ final class HomeViewController: UIViewController {
     
     private var presenter: HomePresenter?
     private var model: Woman!
+    private var coreDataCoordinator = CoreDataCoordinator()
    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         setLayout()
         initialize()
     }

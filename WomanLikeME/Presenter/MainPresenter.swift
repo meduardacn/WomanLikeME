@@ -25,23 +25,23 @@ final class HomePresenter{
 
     // MARK: Init IBOutlets
     func initPhraseLabel(){
-        view.setPhrase(phrase: model.phrase)
+        view.setPhrase(phrase: model.phrase!)
     }
     func initNameLabel(){
-        view.setName(name: model.name)
+        view.setName(name: model.name!)
     }
     func initAgeLabel(){
-        let age = ageCalculator(date: model.date)
+        let age = ageCalculator(date: model.date!)
         view.setAge(age: age)
     }
     func initJobLabel(){
-        view.setJob(job: model.carrer)
+        view.setJob(job: model.carrer!)
     }
     func initTextLabel(){
-        view.setText(text: model.textAbout)
+        view.setText(text: model.textAbout!)
     }
     func initImage(){
-        if let data = Data(base64Encoded: model.image){
+        if let data = Data(base64Encoded: model.image!){
             view.setImage(imageData: data)
         }
         
@@ -52,7 +52,7 @@ final class HomePresenter{
     
     // MARK: Other functions
     func onFavorite(){
-        if model.saved{
+        if model.saved {
             //  excluir das  salvas
             view.favorite(image: "NotFavorited")
         }else{
