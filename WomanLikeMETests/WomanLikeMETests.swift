@@ -105,8 +105,7 @@ final class TestNotEmpty: QuickSpec{
                     expect(newWoman.date).toNot(be(""))
                     expect(newWoman.carrer).toNot(be(""))
                     expect(newWoman.phrase).toNot(be(""))
-                    let image = Data(base64Encoded: newWoman.image)
-                    expect(image).toNot(haveCount(0))
+                    expect(newWoman.image).toNot(be(""))
                 }
             }
         }

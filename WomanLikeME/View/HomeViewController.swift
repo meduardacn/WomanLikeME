@@ -32,13 +32,13 @@ final class HomeViewController: UIViewController {
     }
     // MARK: Init Screen informations
     override func viewWillAppear(_ animated: Bool) {
-        image.image =  UIImage(named: "DaniBraguini")
+        //image.image =  UIImage(named: "DaniBraguini")
         presenter?.initPhraseLabel()
         presenter?.initNameLabel()
         presenter?.initAgeLabel()
         presenter?.initJobLabel()
         presenter?.initTextLabel()
-        //presenter?.initImage()
+        presenter?.initImage()
         presenter?.initFavorite()
         
     }
@@ -80,8 +80,8 @@ extension  HomeViewController : HomeViewDelegate {
     internal func setText(text: String) {
         textLabel.text = text
     }
-    internal func setImage(imageData: Data) {
-        image.image = UIImage(data: imageData)
+    internal func setImage(string: String) {
+        image.image = UIImage(named: string)
         
     }
     internal func setFavoriteImage(image: String){

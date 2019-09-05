@@ -39,9 +39,7 @@ final class HomePresenter {
         view.setText(text: model.textAbout)
     }
     func initImage(){
-        if let data = Data(base64Encoded: model.image){
-            view.setImage(imageData: data)
-        }
+        view.setImage(string: model.image)
     }
     func initFavorite(){
         if model.saved{
