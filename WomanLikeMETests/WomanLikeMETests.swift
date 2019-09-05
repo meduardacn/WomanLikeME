@@ -7,56 +7,87 @@
 //
 
 import Quick
+
+
+
 import Nimble
 
 @testable import WomanLikeME
 
-final class Test: QuickSpec{
-    
+final class TestFavoriteFunctions : QuickSpec{
     override func spec() {
-        // Scenario 2: Favorite a story
+        // Scenario : Favorite a story
         //GIVEN
-        describe("A woman who favorite a story"){
-            
+        describe("GIVEN a user uses the app"){
+            var user = User()
+            let list = user.getListOfFAvorite()
             //WHEN
-            context("a story that is favorited"){
-                
+            context("WHEN a story that is favorited"){
+                let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 0)
+                user.addWoman(new: newWoman)
+                let newlist = user.getListOfFAvorite()
                 //THEN
-                it("a story is saved to a favorite list"){
+                it("THEN it is saved to a favorite list"){
+                    expect(list.count).to(equal(newlist.count-1))
                     
                 }
             }
         }
         
-        // Scenario 3: Didn't favorite a story and access a favorite list
+        // Scenario : disfavor a story
+        //GIVEN
+        describe("GIVEN a user uses the app"){
+            var user = User()
+            let list = user.getListOfFAvorite()
+            //WHEN
+            context("WHEN a story that is disfavorited"){
+                let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 0)
+                user.addWoman(new: newWoman)
+                user.deleteWoman(new: newWoman)
+                let newlist = user.getListOfFAvorite()
+                //THEN
+                it("THEN it is saved to a favorite list"){
+                    expect(list.count).to(equal(newlist.count))
+                    
+                }
+            }
+        }
+        
+        // Scenario : Didn't favorite a story and access a favorite list
         //GIVEN
         describe("A woman who didn't favorited a story yet"){
-            
+            let user = User()
             //WHEN
             context("the favorite list is accessed"){
-                
+                let list = user.getListOfFAvorite()
                 //THEN
                 it("the list is empty"){
-                    
+                    expect(list).to(beEmpty())
                 }
             }
         }
         
-        // Scenario 4: Did Favorite a story and access a favorite list
+        // Scenario : Did Favorite a story and access a favorite list
         //GIVEN
         describe("A woman who favorited a story"){
-            
+            var user = User()
+            let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 0)
+            user.addWoman(new: newWoman)
+            let newWoman2 = Woman(name: "Maria", date: "21/08/1998", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 1)
+            user.addWoman(new: newWoman2)
             //WHEN
             context("the favorite list is acessed"){
-                
+                let list = user.getListOfFAvorite()
                 //THEN
                 it("the list contains all the favorites stories"){
-                    
+                   expect(list.count).to(equal(2))
                 }
             }
         }
+        
     }
 }
+
 
 final class TestNotEmpty: QuickSpec{
     override func spec() {

@@ -284,7 +284,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="500" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah9-z9-7Hx">
                                                 <rect key="frame" x="15" y="84" width="384" height="524"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="Z25-pm-Qzs"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="Z25-pm-Qzs"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
                                                     <fragment>
