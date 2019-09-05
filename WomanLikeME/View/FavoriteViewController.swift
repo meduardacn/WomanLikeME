@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoriteViewControler: UIViewController {
-    
+    private let presenter : 
     @IBOutlet weak var favoritesTableView: UITableView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -50,4 +50,8 @@ extension FavoriteViewControler: UITableViewDelegate, UITableViewDataSource {
     
     
 
+}
+
+extension FavoriteViewControler : FavoriteViewDelegate{
+    
 }

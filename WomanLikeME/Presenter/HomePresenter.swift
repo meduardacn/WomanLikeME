@@ -59,8 +59,8 @@ final class HomePresenter {
             
         }else{
             model.saved = true
-            //  adicionar nas  salvas
-           view.setFavoriteImage(image: "favFullWhiteButton")
+            user.deleteWoman(new: model)
+            view.setFavoriteImage(image: "favFullWhiteButton")
         }
     }
     
