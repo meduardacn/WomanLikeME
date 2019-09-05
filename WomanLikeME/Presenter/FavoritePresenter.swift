@@ -10,12 +10,12 @@ import Foundation
 
 final class FavoritePresenter {
     private let view: FavoriteViewDelegate
-    private var model : Woman
+    private var modelFirst : Woman?
     private var user : User
     
     required init(view: FavoriteViewDelegate){
         self.view = view
         user = User()
-        //model = user.
+        modelFirst = user.getListOfFAvorite().first
     }
 }

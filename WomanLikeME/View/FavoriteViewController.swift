@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoriteViewControler: UIViewController {
-    private let presenter : 
+    private var presenter : FavoritePresenter?
     @IBOutlet weak var favoritesTableView: UITableView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -18,7 +18,7 @@ class FavoriteViewControler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        presenter = FavoritePresenter(view: self)
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
         favoritesTableView.bounces = false
