@@ -20,20 +20,19 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var scrolView: UIScrollView!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var phraseView: UIView!
+    @IBOutlet weak var shareButton: UIButton!
     
     private var presenter: HomePresenter?
     private var model: Woman!
    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         setLayout()
         initialize()
     }
+    // MARK: Init Screen informations
     override func viewWillAppear(_ animated: Bool) {
         image.image =  UIImage(named: "DaniBraguini")
-        //favoriteButton.setImage( UIImage(named: "DaniBraguini"), for: .normal)
-        //favoriteButton.imageView?.image = UIImage(named: "DaniBraguini")
         presenter?.initPhraseLabel()
         presenter?.initNameLabel()
         presenter?.initAgeLabel()
@@ -50,14 +49,19 @@ final class HomeViewController: UIViewController {
         scrolView.bounces = false
     }
     private func initialize(){
-        model  = Woman(name: "Bruno", date: "07/10/1998", carrer: "Estudante", textAbout: "EU GOSTO MUITO DE CHOCOLOATE, e aturo a maria eduarda", image: "DaniBraguini", phrase: "nunca vi ninguem", saved: false)
-        presenter = HomePresenter(view: self, model: model)
+        presenter = HomePresenter(view: self)
     }
+    
+    // MARK: Button action functions
     @IBAction func onFavorite(_ sender: Any) {
         presenter?.onFavorite()
     }
     
+    @IBAction func onShare(_ sender: Any) {
+        presenter?.OnShare()
+    }
 }
+
 // MARK: HomeViewDelegate
 extension  HomeViewController : HomeViewDelegate {
     internal func setPhrase(phrase: String) {

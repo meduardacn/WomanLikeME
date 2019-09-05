@@ -201,6 +201,9 @@
                                         <state key="normal" image="shareButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KaQ-3F-i1E"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.08627542108297348" green="0.08627290278673172" blue="0.086274601519107819" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -385,12 +388,13 @@
                         <outlet property="phraseLabel" destination="HVC-Z2-ttS" id="OJ4-29-JJP"/>
                         <outlet property="phraseView" destination="Rcn-EH-ol8" id="lkS-FL-7U4"/>
                         <outlet property="scrolView" destination="cVv-s0-lmw" id="VXP-Oy-zjA"/>
+                        <outlet property="shareButton" destination="fhT-Iq-NaI" id="Xgt-U6-9xv"/>
                         <outlet property="textLabel" destination="ah9-z9-7Hx" id="Dij-11-AKW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2532" y="45"/>
+            <point key="canvasLocation" x="2531.8840579710145" y="44.866071428571423"/>
         </scene>
         <!--Send History-->
         <scene sceneID="zi7-Y5-jny">

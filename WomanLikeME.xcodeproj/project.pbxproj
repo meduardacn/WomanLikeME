@@ -22,12 +22,11 @@
 		606A6E08231ED74A00109063 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E06231ED74A00109063 /* HomeViewController.swift */; };
 		606A6E0A231EDCAE00109063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E09231EDCAE00109063 /* User.swift */; };
 		606A6E0B231EDCAE00109063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E09231EDCAE00109063 /* User.swift */; };
-		606A6E10231EF4E400109063 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* MainPresenter.swift */; };
-		606A6E11231EF4E400109063 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* MainPresenter.swift */; };
+		606A6E10231EF4E400109063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* HomePresenter.swift */; };
+		606A6E11231EF4E400109063 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* HomePresenter.swift */; };
 		606A6E14231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E15231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E182320512100109063 /* DateTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E172320512100109063 /* DateTransformation.swift */; };
-		6092DB09232053A20037FB68 /* DateTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E172320512100109063 /* DateTransformation.swift */; };
 		688E315123203D2F00D9B581 /* ReadingPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E315023203D2F00D9B581 /* ReadingPList.swift */; };
 		68C02C58232027D700396391 /* WomanLikeME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68C02C57232027D700396391 /* WomanLikeME.plist */; };
 		7415A6472175269B9FC0D9F2 /* Pods_WomanLikeMETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69241AC0D6DBBFF7B6B36E8 /* Pods_WomanLikeMETests.framework */; };
@@ -75,7 +74,7 @@
 		606A6E03231ED29500109063 /* Woman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Woman.swift; sourceTree = "<group>"; };
 		606A6E06231ED74A00109063 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		606A6E09231EDCAE00109063 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		606A6E0F231EF4E400109063 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		606A6E0F231EF4E400109063 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		606A6E13231EFD7500109063 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
 		606A6E172320512100109063 /* DateTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransformation.swift; sourceTree = "<group>"; };
 		654D739D52CCFCEFB91012B5 /* Pods-WomanLikeMEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WomanLikeMEUITests.debug.xcconfig"; path = "Target Support Files/Pods-WomanLikeMEUITests/Pods-WomanLikeMEUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,8 +202,7 @@
 		601DC1EC231DAAB200004C4B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				606A6E172320512100109063 /* DateTransformation.swift */,
-				606A6E0F231EF4E400109063 /* MainPresenter.swift */,
+				606A6E0F231EF4E400109063 /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -225,6 +223,7 @@
 				601DC1BF231D922300004C4B /* WomanLikeME.xcdatamodeld */,
 				68C02C57232027D700396391 /* WomanLikeME.plist */,
 				688E315023203D2F00D9B581 /* ReadingPList.swift */,
+				606A6E172320512100109063 /* DateTransformation.swift */,
 			);
 			path = Suport;
 			sourceTree = "<group>";
@@ -496,7 +495,7 @@
 				F225D8F8231F106000F31BCC /* FavoriteTableViewCell.swift in Sources */,
 				688E315123203D2F00D9B581 /* ReadingPList.swift in Sources */,
 				601DC1B9231D922300004C4B /* AppDelegate.swift in Sources */,
-				606A6E10231EF4E400109063 /* MainPresenter.swift in Sources */,
+				606A6E10231EF4E400109063 /* HomePresenter.swift in Sources */,
 				F225D8F6231F0ED800F31BCC /* FavoriteViewController.swift in Sources */,
 				601DC1C1231D922300004C4B /* WomanLikeME.xcdatamodeld in Sources */,
 				606A6E14231EFD7500109063 /* HomeViewProtocol.swift in Sources */,
@@ -507,8 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6092DB09232053A20037FB68 /* DateTransformation.swift in Sources */,
-				606A6E11231EF4E400109063 /* MainPresenter.swift in Sources */,
+				606A6E11231EF4E400109063 /* HomePresenter.swift in Sources */,
 				606A6E15231EFD7500109063 /* HomeViewProtocol.swift in Sources */,
 				606A6E0B231EDCAE00109063 /* User.swift in Sources */,
 				606A6E05231ED29500109063 /* Woman.swift in Sources */,
