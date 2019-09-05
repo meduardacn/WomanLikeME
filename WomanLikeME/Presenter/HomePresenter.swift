@@ -15,10 +15,10 @@ final class HomePresenter {
   
     var transform = DateTransformation()
     
-    required init(view: HomeViewDelegate, model: Woman) {
+    required init(view: HomeViewDelegate) {
         self.view = view
-        self.model = model
         user = User()
+        model = user.womanOftheDay()
     }
 
     // MARK: Init IBOutlets
@@ -42,7 +42,6 @@ final class HomePresenter {
         if let data = Data(base64Encoded: model.image){
             view.setImage(imageData: data)
         }
-        
     }
     func initFavorite(){
         if model.saved{
@@ -50,21 +49,24 @@ final class HomePresenter {
         }else{
              view.setFavoriteImage(image:"favWhiteButton")
         }
-            
-        
     }
-    
-    // MARK: Other functions
+    // MARK: Button action functions
     func onFavorite(){
         if model.saved{
             model.saved = false
-            //  excluir das  salvas
+            user.addWoman(new: model)
             view.setFavoriteImage(image: "favWhiteButton")
+            
         }else{
             model.saved = true
             //  adicionar nas  salvas
            view.setFavoriteImage(image: "favFullWhiteButton")
         }
+    }
+    
+    
+    func OnShare(){
+        
     }
     
     

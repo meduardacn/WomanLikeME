@@ -20,8 +20,15 @@ struct User{
     mutating func addWoman(new: Woman){
         listOfFavorited.append(new)
     }
-    func getList() -> [Woman] {
+    mutating func deleteWoman(new: Woman){
+        listOfFavorited.removeAll { $0.id == new.id }
+    }
+    func getListOfFAvorite() -> [Woman] {
         return listOfFavorited
+    }
+    
+    func womanOftheDay() -> Woman{
+        return Woman(name: "Bruna", date: "07/10/1998", carrer: "Estudante", textAbout: "EU GOSTO MUITO DE CHOCOLOATE", image: "DaniBraguini", phrase: "nunca vi ninguem", saved: false, id: 0)
     }
     
 }

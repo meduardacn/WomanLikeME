@@ -9,6 +9,7 @@
 import Foundation
 
 struct Woman {
+    let id : Int
     let name : String
     let date : String
     let carrer : String
@@ -17,6 +18,7 @@ struct Woman {
     let phrase : String
     var saved : Bool
     init(){
+        self.id = 0
         self.name = ""
         self.date = ""
         self.carrer = ""
@@ -28,7 +30,7 @@ struct Woman {
     
     
     
-    init(name : String, date : String, carrer : String, textAbout : String, image : String, phrase : String, saved : Bool) {
+    init(name : String, date : String, carrer : String, textAbout : String, image : String, phrase : String, saved : Bool, id: Int) {
         self.name = name
         self.date = date
         self.carrer = carrer
@@ -36,5 +38,6 @@ struct Woman {
         self.image = image
         self.phrase = phrase
         self.saved = saved
+        self.id = id
     }
 }

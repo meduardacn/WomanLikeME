@@ -70,7 +70,7 @@ final class TestNotEmpty: QuickSpec{
                 let first = allWoman[0]
                 //THEN
                 it("THEN a story of woman is loaded AND with a not empty text about her AND with a not empty name AND with a not empty date AND with a not empty carrer AND with a not empty phrase AND with an valid image "){
-                    let newWoman = Woman(name: first.name, date: first.date, carrer: first.carrer, textAbout: first.textAbout, image: first.image, phrase: first.phrase, saved: first.saved)
+                    let newWoman = Woman(name: first.name, date: first.date, carrer: first.carrer, textAbout: first.textAbout, image: first.image, phrase: first.phrase, saved: first.saved, id: 0)
                     expect(newWoman.textAbout).toNot(be(""))
                     expect(newWoman.name).toNot(be(""))
                     expect(newWoman.date).toNot(be(""))
@@ -109,7 +109,7 @@ final class TestDateTransformation: QuickSpec{
     // Scenario : A woman born in 1989 is loaded
     //GIVEN
         describe("GIVEN a woman born in 20/02/1989"){
-            let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: false)
+            let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: false, id: 0)
             //WHEN
                 context("WHEN her story is loaded in 04/09/2019"){
                 let transform = DateTransformation()
