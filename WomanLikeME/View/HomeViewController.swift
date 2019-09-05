@@ -25,9 +25,23 @@ final class HomeViewController: UIViewController {
     private var model: Woman!
    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         setLayout()
         initialize()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        image.image =  UIImage(named: "DaniBraguini")
+        //favoriteButton.setImage( UIImage(named: "DaniBraguini"), for: .normal)
+        //favoriteButton.imageView?.image = UIImage(named: "DaniBraguini")
+        presenter?.initPhraseLabel()
+        presenter?.initNameLabel()
+        presenter?.initAgeLabel()
+        presenter?.initJobLabel()
+        presenter?.initTextLabel()
+        //presenter?.initImage()
+        presenter?.initFavorite()
+        
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -36,7 +50,7 @@ final class HomeViewController: UIViewController {
         scrolView.bounces = false
     }
     private func initialize(){
-        model  = Woman()
+        model  = Woman(name: "Bruno", date: "07/10/1998", carrer: "Estudante", textAbout: "EU GOSTO MUITO DE CHOCOLOATE, e aturo a maria eduarda", image: "DaniBraguini", phrase: "nunca vi ninguem", saved: false)
         presenter = HomePresenter(view: self, model: model)
     }
     @IBAction func onFavorite(_ sender: Any) {
@@ -46,9 +60,6 @@ final class HomeViewController: UIViewController {
 }
 // MARK: HomeViewDelegate
 extension  HomeViewController : HomeViewDelegate {
-    internal func favorite(image: String) {
-        favoriteButton.imageView?.image = UIImage(named: image)
-    }
     internal func setPhrase(phrase: String) {
         phraseLabel.text = phrase
         fullPhraseLabel.text = phrase
@@ -70,6 +81,6 @@ extension  HomeViewController : HomeViewDelegate {
         
     }
     internal func setFavoriteImage(image: String){
-        favoriteButton.imageView?.image = UIImage(named: image)
+        favoriteButton.setImage( UIImage(named: image), for: .normal)
     }
 }
