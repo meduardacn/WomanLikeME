@@ -92,6 +92,7 @@
 		606A6E172320512100109063 /* DateTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransformation.swift; sourceTree = "<group>"; };
 		654D739D52CCFCEFB91012B5 /* Pods-WomanLikeMEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WomanLikeMEUITests.debug.xcconfig"; path = "Target Support Files/Pods-WomanLikeMEUITests/Pods-WomanLikeMEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		685D83CC2321790900E86A36 /* CoreDataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCoordinator.swift; sourceTree = "<group>"; };
+		685D83CE232191D800E86A36 /* WomanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WomanModel.swift; sourceTree = "<group>"; };
 		688E315023203D2F00D9B581 /* ReadingPList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingPList.swift; sourceTree = "<group>"; };
 		68C02C57232027D700396391 /* WomanLikeME.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WomanLikeME.plist; sourceTree = "<group>"; };
 		6A17436102C0820A823ECCB3 /* Pods_WomanLikeME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WomanLikeME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -520,6 +521,7 @@
 				F225D8F8231F106000F31BCC /* FavoriteTableViewCell.swift in Sources */,
 				688E315123203D2F00D9B581 /* ReadingPList.swift in Sources */,
 				601DC1B9231D922300004C4B /* AppDelegate.swift in Sources */,
+				685D83CF232191D800E86A36 /* WomanModel.swift in Sources */,
 				685D83CD2321790900E86A36 /* CoreDataCoordinator.swift in Sources */,
 				60678A2A23217B8B00F032CA /* CategoryPresenter.swift in Sources */,
 				606A6E10231EF4E400109063 /* HomePresenter.swift in Sources */,
