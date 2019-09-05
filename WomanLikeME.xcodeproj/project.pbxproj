@@ -21,6 +21,8 @@
 		60678A2823217AFE00F032CA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E0F231EF4E400109063 /* HomePresenter.swift */; };
 		60678A2A23217B8B00F032CA /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678A2923217B8B00F032CA /* CategoryPresenter.swift */; };
 		60678A2C23217C6A00F032CA /* CategoryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678A2B23217C6A00F032CA /* CategoryViewProtocol.swift */; };
+		60678A2E23218CC000F032CA /* FavoritedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678A2D23218CC000F032CA /* FavoritedPresenter.swift */; };
+		60678A3023218D1200F032CA /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60678A2F23218D1200F032CA /* FavoritePresenter.swift */; };
 		606A6E04231ED29500109063 /* Woman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E03231ED29500109063 /* Woman.swift */; };
 		606A6E05231ED29500109063 /* Woman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E03231ED29500109063 /* Woman.swift */; };
 		606A6E07231ED74A00109063 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E06231ED74A00109063 /* HomeViewController.swift */; };
@@ -80,6 +82,8 @@
 		601DC1E9231D927E00004C4B /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		60678A2923217B8B00F032CA /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
 		60678A2B23217C6A00F032CA /* CategoryViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewProtocol.swift; sourceTree = "<group>"; };
+		60678A2D23218CC000F032CA /* FavoritedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedPresenter.swift; sourceTree = "<group>"; };
+		60678A2F23218D1200F032CA /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
 		606A6E03231ED29500109063 /* Woman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Woman.swift; sourceTree = "<group>"; };
 		606A6E06231ED74A00109063 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		606A6E09231EDCAE00109063 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 			children = (
 				606A6E0F231EF4E400109063 /* HomePresenter.swift */,
 				60678A2923217B8B00F032CA /* CategoryPresenter.swift */,
+				60678A2F23218D1200F032CA /* FavoritePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			children = (
 				606A6E13231EFD7500109063 /* HomeViewProtocol.swift */,
 				60678A2B23217C6A00F032CA /* CategoryViewProtocol.swift */,
+				60678A2D23218CC000F032CA /* FavoritedPresenter.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -509,10 +515,12 @@
 				606A6E0A231EDCAE00109063 /* User.swift in Sources */,
 				601DC1BB231D922300004C4B /* ViewController.swift in Sources */,
 				60678A2C23217C6A00F032CA /* CategoryViewProtocol.swift in Sources */,
+				60678A2E23218CC000F032CA /* FavoritedPresenter.swift in Sources */,
 				606A6E182320512100109063 /* DateTransformation.swift in Sources */,
 				F225D8F8231F106000F31BCC /* FavoriteTableViewCell.swift in Sources */,
 				688E315123203D2F00D9B581 /* ReadingPList.swift in Sources */,
 				601DC1B9231D922300004C4B /* AppDelegate.swift in Sources */,
+				60678A3023218D1200F032CA /* FavoritePresenter.swift in Sources */,
 				60678A2A23217B8B00F032CA /* CategoryPresenter.swift in Sources */,
 				606A6E10231EF4E400109063 /* HomePresenter.swift in Sources */,
 				F225D8F6231F0ED800F31BCC /* FavoriteViewController.swift in Sources */,

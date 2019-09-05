@@ -8,8 +8,6 @@
 
 import Quick
 
-
-
 import Nimble
 
 @testable import WomanLikeME
