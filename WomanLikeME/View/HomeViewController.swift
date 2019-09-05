@@ -20,6 +20,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var scrolView: UIScrollView!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var phraseView: UIView!
+    @IBOutlet weak var shareButton: UIButton!
     
     private var presenter: HomePresenter?
     private var model: Woman!
@@ -30,6 +31,18 @@ final class HomeViewController: UIViewController {
         setLayout()
         initialize()
     }
+    // MARK: Init Screen informations
+    override func viewWillAppear(_ animated: Bool) {
+        image.image =  UIImage(named: "DaniBraguini")
+        presenter?.initPhraseLabel()
+        presenter?.initNameLabel()
+        presenter?.initAgeLabel()
+        presenter?.initJobLabel()
+        presenter?.initTextLabel()
+        //presenter?.initImage()
+        presenter?.initFavorite()
+        
+    }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -37,19 +50,21 @@ final class HomeViewController: UIViewController {
         scrolView.bounces = false
     }
     private func initialize(){
-        model  = Woman()
-        presenter = HomePresenter(view: self, model: model)
+        presenter = HomePresenter(view: self)
     }
+    
+    // MARK: Button action functions
     @IBAction func onFavorite(_ sender: Any) {
         presenter?.onFavorite()
     }
     
+    @IBAction func onShare(_ sender: Any) {
+        presenter?.OnShare()
+    }
 }
+
 // MARK: HomeViewDelegate
 extension  HomeViewController : HomeViewDelegate {
-    internal func favorite(image: String) {
-        favoriteButton.imageView?.image = UIImage(named: image)
-    }
     internal func setPhrase(phrase: String) {
         phraseLabel.text = phrase
         fullPhraseLabel.text = phrase
@@ -71,6 +86,6 @@ extension  HomeViewController : HomeViewDelegate {
         
     }
     internal func setFavoriteImage(image: String){
-        favoriteButton.imageView?.image = UIImage(named: image)
+        favoriteButton.setImage( UIImage(named: image), for: .normal)
     }
 }
