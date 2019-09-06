@@ -14,6 +14,6 @@ protocol HomeViewDelegate : class {
     func setAge(age: String)
     func setJob(job: String)
     func setText(text: String)
-    func setImage(string: String)
+    func setImage(imageStr: String)
     func setFavoriteImage(image: String)
 }

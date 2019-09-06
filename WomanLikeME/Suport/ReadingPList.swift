@@ -9,6 +9,7 @@
 import Foundation
 
 class ReadingPList {
+    static var sharedData = ReadingPList()
     func returningData() -> [Woman] {
         var allWomen : [Woman] = []
         let urlPath = Bundle.main.url(forResource: "WomanLikeME", withExtension: "plist")

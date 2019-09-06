@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoriteTableViewCell: UITableViewCell {
-    
+    var womanlId : Int?
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var womanImageView: UIImageView!
     @IBOutlet weak var womanNameLabel: UILabel!

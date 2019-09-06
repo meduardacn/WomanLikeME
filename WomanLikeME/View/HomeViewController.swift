@@ -32,14 +32,7 @@ final class HomeViewController: UIViewController {
     }
     // MARK: Init Screen informations
     override func viewWillAppear(_ animated: Bool) {
-        //image.image =  UIImage(named: "DaniBraguini")
-        presenter?.initPhraseLabel()
-        presenter?.initNameLabel()
-        presenter?.initAgeLabel()
-        presenter?.initJobLabel()
-        presenter?.initTextLabel()
-        presenter?.initImage()
-        presenter?.initFavorite()
+        presenter?.reload()
         
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -50,6 +43,13 @@ final class HomeViewController: UIViewController {
     }
     private func initialize(){
         presenter = HomePresenter(view: self)
+        presenter?.initPhraseLabel()
+        presenter?.initNameLabel()
+        presenter?.initAgeLabel()
+        presenter?.initJobLabel()
+        presenter?.initTextLabel()
+        presenter?.initImage()
+        presenter?.initFavorite()
     }
     
     // MARK: Button action functions
@@ -58,6 +58,16 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func onShare(_ sender: Any) {
+        if image.image != nil{
+            let imageToShare = [ image.image     ]
+            
+            let activityViewController = UIActivityViewController(activityItems: imageToShare as [Any], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            
+            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+            
+            self.present(activityViewController, animated: true, completion: nil)
+        }
         presenter?.OnShare()
     }
 }
@@ -80,9 +90,8 @@ extension  HomeViewController : HomeViewDelegate {
     internal func setText(text: String) {
         textLabel.text = text
     }
-    internal func setImage(string: String) {
-        image.image = UIImage(named: string)
-        
+    internal func setImage(imageStr: String) {
+        image.image =  UIImage(named: imageStr)
     }
     internal func setFavoriteImage(image: String){
         favoriteButton.setImage( UIImage(named: image), for: .normal)

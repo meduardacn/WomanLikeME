@@ -17,13 +17,12 @@ final class TestFavoriteFunctions : QuickSpec{
         // Scenario : Favorite a story
         //GIVEN
         describe("GIVEN a user uses the app"){
-            var user = User()
-            let list = user.getListOfFAvorite()
+            let list = User.sharedService.fecthListOfFAvorite()
             //WHEN
             context("WHEN a story that is favorited"){
                 let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 0)
-                user.addWoman(new: newWoman)
-                let newlist = user.getListOfFAvorite()
+                User.sharedService.addWoman(new: newWoman)
+                let newlist = User.sharedService.fecthListOfFAvorite()
                 //THEN
                 it("THEN it is saved to a favorite list"){
                     expect(list.count).to(equal(newlist.count-1))
@@ -35,17 +34,15 @@ final class TestFavoriteFunctions : QuickSpec{
         // Scenario : disfavor a story
         //GIVEN
         describe("GIVEN a user uses the app"){
-            var user = User()
-            let list = user.getListOfFAvorite()
             //WHEN
             context("WHEN a story that is disfavorited"){
                 let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 0)
-                user.addWoman(new: newWoman)
-                user.deleteWoman(new: newWoman)
-                let newlist = user.getListOfFAvorite()
+                User.sharedService.addWoman(new: newWoman)
+                User.sharedService.deleteWoman(new: newWoman)
+                let list = User.sharedService.fecthListOfFAvorite()
                 //THEN
                 it("THEN it is saved to a favorite list"){
-                    expect(list.count).to(equal(newlist.count))
+                    expect(list.contains(where: { $0.id == newWoman.id} )).to(beFalse())
                     
                 }
             }
@@ -54,10 +51,9 @@ final class TestFavoriteFunctions : QuickSpec{
         // Scenario : Didn't favorite a story and access a favorite list
         //GIVEN
         describe("A woman who didn't favorited a story yet"){
-            let user = User()
             //WHEN
             context("the favorite list is accessed"){
-                let list = user.getListOfFAvorite()
+                let list = User.sharedService.fecthListOfFAvorite()
                 //THEN
                 it("the list is empty"){
                     expect(list).to(beEmpty())
@@ -68,14 +64,13 @@ final class TestFavoriteFunctions : QuickSpec{
         // Scenario : Did Favorite a story and access a favorite list
         //GIVEN
         describe("A woman who favorited a story"){
-            var user = User()
             let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 0)
-            user.addWoman(new: newWoman)
+            User.sharedService.addWoman(new: newWoman)
             let newWoman2 = Woman(name: "Maria", date: "21/08/1998", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 1)
-            user.addWoman(new: newWoman2)
+            User.sharedService.addWoman(new: newWoman2)
             //WHEN
             context("the favorite list is acessed"){
-                let list = user.getListOfFAvorite()
+                let list = User.sharedService.fecthListOfFAvorite()
                 //THEN
                 it("the list contains all the favorites stories"){
                    expect(list.count).to(equal(2))
