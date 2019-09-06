@@ -32,13 +32,7 @@ final class HomeViewController: UIViewController {
     }
     // MARK: Init Screen informations
     override func viewWillAppear(_ animated: Bool) {
-        presenter?.initPhraseLabel()
-        presenter?.initNameLabel()
-        presenter?.initAgeLabel()
-        presenter?.initJobLabel()
-        presenter?.initTextLabel()
-        presenter?.initImage()
-        presenter?.initFavorite()
+        presenter?.reload()
         
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -49,6 +43,13 @@ final class HomeViewController: UIViewController {
     }
     private func initialize(){
         presenter = HomePresenter(view: self)
+        presenter?.initPhraseLabel()
+        presenter?.initNameLabel()
+        presenter?.initAgeLabel()
+        presenter?.initJobLabel()
+        presenter?.initTextLabel()
+        presenter?.initImage()
+        presenter?.initFavorite()
     }
     
     // MARK: Button action functions

@@ -18,7 +18,11 @@ final class HomePresenter {
         self.view = view
         model = User.sharedService.womanOftheDay()
     }
-
+    func reload(){
+        model = User.sharedService.womanOftheDay()
+        initFavorite()
+    }
+    
     // MARK: Init IBOutlets
     func initPhraseLabel(){
         view.setPhrase(phrase: model.phrase)

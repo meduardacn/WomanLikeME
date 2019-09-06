@@ -175,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="212" y="-684"/>
         </scene>
-        <!--History-->
+        <!--Story-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="WomanLikeME" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Story" customClass="HomeViewController" customModule="WomanLikeME" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" tag="-2" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,7 +389,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" image="historyButton" id="D0b-7B-z8g"/>
+                    <tabBarItem key="tabBarItem" title="Story" image="historyButton" id="D0b-7B-z8g"/>
                     <navigationItem key="navigationItem" id="aSC-3N-nct"/>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
@@ -410,17 +410,17 @@
             </objects>
             <point key="canvasLocation" x="1284" y="276"/>
         </scene>
-        <!--Send History-->
+        <!--Send Story-->
         <scene sceneID="zi7-Y5-jny">
             <objects>
-                <viewController id="CGz-GM-xh3" sceneMemberID="viewController">
+                <viewController id="CGz-GM-xh3" userLabel="Send Story" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e59-F1-8vJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Qme-wT-r0I"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Send History" image="sendButton" id="HqD-PL-MNf"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Send Story" image="sendButton" id="HqD-PL-MNf" userLabel="Send Story"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqH-dm-G1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
