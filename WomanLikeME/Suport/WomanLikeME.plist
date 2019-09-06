@@ -16,6 +16,7 @@ Durante a minha vida profissional, sempre notei que alguns dos meus colegas me t
 		<string>Nunca se desculpe por ser uma mulher poderosa 💪
 </string>
 		<false/>
+		<string>0</string>
 	</array>
 	<array>
 		<string>Milena Pauli</string>
@@ -25,6 +26,7 @@ Durante a minha vida profissional, sempre notei que alguns dos meus colegas me t
 		<string>MilenaPauli</string>
 		<string>“Antes feito que perfeito!&quot;</string>
 		<false/>
+		<string>1</string>
 	</array>
 	<array>
 		<string>Sabrina Moura</string>
@@ -34,6 +36,7 @@ Durante a minha vida profissional, sempre notei que alguns dos meus colegas me t
 		<string>Sabrina</string>
 		<string>“Ninguém quer estar em águas calmas durante toda a vida.&quot; Jane Austen</string>
 		<false/>
+		<string>2</string>
 	</array>
 	<array>
 		<string>Joseana Mar</string>
@@ -44,10 +47,11 @@ Nesse meio tempo comecei a trabalhar em um banco, onde vi e passei por muitas si
 Mas eu odiava aquilo, odiava a responsabilidade, a necessidade de ter que vender coisas que não eram realmente para o cliente, mas sim para bater uma meta absurda!
 Nisso fiquei cinco anos, até o dia que um assalto fez com que eu a minha vida passasse na minha cabeça, momento que notei que tudo o que tinha acontecido até ali não me orgulhava, não fazia sentido, eu não tinha vivido. 
 Hoje estudo Produção Multimídia, as vezes ouço das pessoa que fui louca e burra de ter largado o emprego dos sonhos, mas eu sei que apenas fui eu mesma. Não vivi momentos tão legais, mas queria dizer que não importa o tamanho do seu sonho e nem se vão te julgar, faça o que te faz feliz, a vida é uma só e não estamos aqui pra comer merenda! Gostaria de compartilhar o último trabalho que fiz, que foi o redesign da página de doação do Criança Esperança, projeto esse que me fez entender um pouco mais sobre as instituições apoiadas.</string>
-		<string>JoseanaMar</string>
+		<string>JoseaneMar</string>
 		<string>“A cor é vida, alegria e tristeza. 
 A cor sou eu.” </string>
 		<false/>
+		<string>3</string>
 	</array>
 	<array>
 		<string>Giulia Ferraro</string>
@@ -57,6 +61,7 @@ A cor sou eu.” </string>
 		<string>GiuliaFerraro</string>
 		<string>“Não fomos escritos para um único instrumento”</string>
 		<false/>
+		<string>4</string>
 	</array>
 	<array>
 		<string>Daniela Braghini</string>
@@ -66,9 +71,10 @@ A cor sou eu.” </string>
 Menina do interior que sonhava em aprender Design na “cidade grande”. Aos 18 anos me mudei para a capital catarinense e me matriculei no esperado curso. Me apaixonei pela profissão e os caminhos foram me levando aos estágios, um intercâmbio, o emprego fixo e a formatura. Fiz amizades inspiradoras e me tornei uma mulher decidida e muito otimista. Encontrei o amor verdadeiro em um homem incrível que eu nunca mais larguei. Me mudei para perto dele e recomecei profissionalmente, agora na capital gaúcha. Engravidamos e agora somos três... ♥️ Muita coisa mudou no mundo e em mim e posso dizer que me sinto orgulhosa e feliz com as escolhas que eu fiz. A maternidade sem dúvidas foi a melhor experiência que eu vivenciei até hoje. Foi um
 universo cheio de novidades, boas e ruins. No fim da minha licença maternidade eu achei que não iria conseguir voltar ao trabalho, amamentar, cuidar de uma criança e continuar a minha profissão. Na época me passou ideias de como eu poderia trabalhar em casa, pensando que não conseguiria levar minha filha na escola com 5 meses, manter a amamentação e todas essas coisas. 
 Apesar dos medos e vontade de desistir eu não queria abrir mão da minha carreira e gostaria de que a minha vida “voltasse ao normal” mesmo com uma filha pequena. Não foi fácil, mas consegui retornar ao trabalho, organizar a rotina de amamentação e os cuidados com a Lorena. Tive sorte de estar em uma empresa que não tem preconceito com mães e de ter um parceiro que realmente assume o papel de pai e marido. Sem isso, tudo teria sido mais difícil. Meu desejo é que todas as mulheres possam fazer suas escolhas com liberdade, assim como fiz as minhas, sem julgamentos e sem padrões pré estabelecidos. Ficar em casa, ir trabalhar, ser mãe, não ser mãe. Que as mulheres possam estar onde elas quiserem, sempre. Compartilho um link de um trabalho realizado em 2016 e que gostei muito de realizar. Trabalhei com estampas e criei produtos com tecido 100% reciclados de garrafas Pet. O ramo de sustentabilidade me interessa bastante e gostei de alinhar design e a sustentabilidade neste projeto. Link do Projeto</string>
-		<string>DaniBraghini</string>
+		<string>DaniBraguini</string>
 		<string>“E de repente, num dia qualquer, acordamos e percebemos que já podemos lidar com aquilo que julgávamos maior que nós mesmos. Não foram as abismos que diminuíram, mas nós que crescemos e evoluímos.”</string>
 		<false/>
+		<string>5</string>
 	</array>
 </array>
 </plist>

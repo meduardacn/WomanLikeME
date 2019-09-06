@@ -56,6 +56,7 @@ extension FavoriteViewControler: UITableViewDelegate, UITableViewDataSource {
         cell.womanImageView.image = UIImage(named: (presenter?.fecthImage(index: indexPath[1]))!)
         cell.womanNameLabel.text = presenter?.fecthName(index: indexPath[1])
         cell.womanPhraseLabel.text = presenter?.fecthPhrase(index: indexPath[1])
+        cell.womanlId = presenter?.fecthId(index: indexPath[1])
         return cell
     }
     

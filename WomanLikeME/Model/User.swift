@@ -16,10 +16,16 @@ struct User{
     init() {
         inicialize()
     }
+    func printId(){
+        allWoman.forEach {
+            print($0.id)
+        }
+    }
     mutating func inicialize(){
         initAllWoman()
         listOfFavorited  = allWoman.filter { $0.saved }
         initWomanOftheDay()
+        printId()
     }
     mutating func addWoman(new: Woman){
         listOfFavorited.append(new)
@@ -32,10 +38,7 @@ struct User{
     }
     mutating func initAllWoman(){
         allWoman.append(contentsOf: ReadingPList.sharedData.returningData() )
-        let w1 = Woman(name: "felina", date: "07/10/1998", carrer: "Estudante", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "cat", phrase: "nunca vi ninguem", saved: false, id: 0)
-        let w2 = Woman(name: "miau", date: "07/10/1998", carrer: "Dorminhoca", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "cat", phrase: "nunca vi ninguem", saved: false, id: 1)
-        allWoman.append(w1)
-        allWoman.append(w2)
+        saveAll()
 
     }
     mutating func updateValue(model : Woman){
@@ -46,15 +49,15 @@ struct User{
         allWoman.append(model)
     }
     mutating func initWomanOftheDay(){
-        var notAppear = allWoman.filter { !$0.appear }.first
+        let notAppear = allWoman.filter { !$0.appear }.first
         notAppear!.appear = true
         dayWoman = notAppear!
     }
     func womanOftheDay() -> Woman{
         return dayWoman
     }
-//    mutating func saveAll(){
-//        allWoman.forEach { $0.saved = true }
-//    }
+    mutating func saveAll(){
+        allWoman.forEach { $0.saved = true }
+    }
     
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Woman {
+class Woman {
     let id : Int
     let name : String
     let date : String
