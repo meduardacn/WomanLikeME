@@ -16,7 +16,7 @@ class ReadingPList {
         if let arrayContents = NSMutableArray(contentsOf: urlPath!) as? [[Any]] {
             var i = 0
             for woman in arrayContents {
-                let womanModel = Woman(name: woman[0] as! String, date: woman[1] as! String, carrer: woman[2] as! String, textAbout: woman[3] as! String, image: woman[4] as! String, phrase: woman[5] as! String, saved: woman[6] as! Bool, id: i as! Int)
+                let womanModel = Woman(name: woman[0] as! String, date: woman[1] as! String, carrer: woman[2] as! String, textAbout: woman[3] as! String, image: woman[4] as! String, phrase: woman[5] as! String, saved: woman[6] as! Bool, id: i )
                 i += 1
                 allWomen.append(womanModel)
             }
