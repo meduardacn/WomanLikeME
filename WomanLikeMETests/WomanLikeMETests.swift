@@ -34,16 +34,15 @@ final class TestFavoriteFunctions : QuickSpec{
         // Scenario : disfavor a story
         //GIVEN
         describe("GIVEN a user uses the app"){
-            let list = User.sharedService.getListOfFAvorite()
             //WHEN
             context("WHEN a story that is disfavorited"){
                 let newWoman = Woman(name: "Camile", date: "20/02/1989", carrer: "dev", textAbout: "qualquer coisa", image: "foto.jpg", phrase: "é isso aí", saved: true, id: 0)
                 User.sharedService.addWoman(new: newWoman)
                 User.sharedService.deleteWoman(new: newWoman)
-                let newlist = User.sharedService.getListOfFAvorite()
+                let list = User.sharedService.getListOfFAvorite()
                 //THEN
                 it("THEN it is saved to a favorite list"){
-                    expect(list.count).to(equal(newlist.count))
+                    expect(list.contains(where: { $0.id == newWoman.id} )).to(beFalse())
                     
                 }
             }

@@ -18,9 +18,12 @@ class FavoriteViewControler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.favoritesTableView.delegate = self
+        
         presenter = FavoritePresenter(view: self)
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
+        
         favoritesTableView.bounces = false
         favoritesTableView.reloadData()
     }
@@ -58,6 +61,5 @@ extension FavoriteViewControler: UITableViewDelegate, UITableViewDataSource {
 
 }
 
-extension FavoriteViewControler : FavoriteViewDelegate{
-    
+extension FavoriteViewControler : FavoriteViewDelegate {
 }

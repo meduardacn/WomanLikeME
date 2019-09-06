@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		601DC1B9231D922300004C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601DC1B8231D922300004C4B /* AppDelegate.swift */; };
-		601DC1BB231D922300004C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601DC1BA231D922300004C4B /* ViewController.swift */; };
+		601DC1BB231D922300004C4B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601DC1BA231D922300004C4B /* DetailsViewController.swift */; };
 		601DC1BE231D922300004C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601DC1BC231D922300004C4B /* Main.storyboard */; };
 		601DC1C1231D922300004C4B /* WomanLikeME.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 601DC1BF231D922300004C4B /* WomanLikeME.xcdatamodeld */; };
 		601DC1C3231D922400004C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 601DC1C2231D922400004C4B /* Assets.xcassets */; };
@@ -33,6 +33,7 @@
 		606A6E14231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E15231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E182320512100109063 /* DateTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E172320512100109063 /* DateTransformation.swift */; };
+		6094B1E52321FD2D00173459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601DC1BC231D922300004C4B /* Main.storyboard */; };
 		688E315123203D2F00D9B581 /* ReadingPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E315023203D2F00D9B581 /* ReadingPList.swift */; };
 		68C02C58232027D700396391 /* WomanLikeME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68C02C57232027D700396391 /* WomanLikeME.plist */; };
 		7415A6472175269B9FC0D9F2 /* Pods_WomanLikeMETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69241AC0D6DBBFF7B6B36E8 /* Pods_WomanLikeMETests.framework */; };
@@ -67,7 +68,7 @@
 		2A8C1C80B1F820CDBEAD04D3 /* Pods_WomanLikeMEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WomanLikeMEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		601DC1B5231D922300004C4B /* WomanLikeME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WomanLikeME.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		601DC1B8231D922300004C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		601DC1BA231D922300004C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		601DC1BA231D922300004C4B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		601DC1BD231D922300004C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		601DC1C0231D922300004C4B /* WomanLikeME.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WomanLikeME.xcdatamodel; sourceTree = "<group>"; };
 		601DC1C2231D922400004C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -206,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				601DC1C4231D922400004C4B /* LaunchScreen.storyboard */,
-				601DC1BA231D922300004C4B /* ViewController.swift */,
+				601DC1BA231D922300004C4B /* DetailsViewController.swift */,
 				606A6E06231ED74A00109063 /* HomeViewController.swift */,
 				F225D8F5231F0ED800F31BCC /* FavoriteViewController.swift */,
 				F225D8F7231F106000F31BCC /* FavoriteTableViewCell.swift */,
@@ -389,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6094B1E52321FD2D00173459 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +515,7 @@
 				606A6E07231ED74A00109063 /* HomeViewController.swift in Sources */,
 				606A6E04231ED29500109063 /* Woman.swift in Sources */,
 				606A6E0A231EDCAE00109063 /* User.swift in Sources */,
-				601DC1BB231D922300004C4B /* ViewController.swift in Sources */,
+				601DC1BB231D922300004C4B /* DetailsViewController.swift in Sources */,
 				60678A2C23217C6A00F032CA /* CategoryViewProtocol.swift in Sources */,
 				60678A2E23218CC000F032CA /* FavoritedPresenter.swift in Sources */,
 				606A6E182320512100109063 /* DateTransformation.swift in Sources */,
