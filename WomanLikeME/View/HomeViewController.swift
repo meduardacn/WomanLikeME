@@ -57,6 +57,16 @@ final class HomeViewController: UIViewController {
     }
     
     @IBAction func onShare(_ sender: Any) {
+        if image.image != nil{
+            let imageToShare = [ image.image     ]
+            
+            let activityViewController = UIActivityViewController(activityItems: imageToShare as [Any], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            
+            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+            
+            self.present(activityViewController, animated: true, completion: nil)
+        }
         presenter?.OnShare()
     }
 }

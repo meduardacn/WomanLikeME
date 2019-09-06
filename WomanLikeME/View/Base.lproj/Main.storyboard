@@ -9,6 +9,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="byO-2G-ux8">
+            <objects>
+                <navigationController id="XRz-84-9G4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1d9-x0-SDs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4a-H7-QQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1466" y="-764"/>
+        </scene>
         <!--Favorites-->
         <scene sceneID="byz-nh-ThA">
             <objects>
@@ -784,7 +797,6 @@
                         <viewLayoutGuide key="safeArea" id="uGy-eZ-0dH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="historyButton" id="QrW-YT-1UY"/>
-                    <navigationItem key="navigationItem" id="1NF-G1-Fyw"/>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="ageLabel" destination="jhC-P7-Io8" id="Nqr-C4-0gs"/>
@@ -792,6 +804,7 @@
                         <outlet property="fullPhraseLabel" destination="gWU-7M-2pS" id="R9g-9H-gLj"/>
                         <outlet property="image" destination="hzr-1g-JsI" id="V4G-RP-7NU"/>
                         <outlet property="jobLabel" destination="VZ9-Ce-adU" id="1HZ-VM-d1H"/>
+                        <outlet property="myView" destination="43R-9B-Pkv" id="3lY-nl-qUK"/>
                         <outlet property="nameLabel" destination="j87-kM-AgY" id="P0h-Xt-R6k"/>
                         <outlet property="phraseLabel" destination="dWf-pI-qsm" id="Kdu-jU-jHk"/>
                         <outlet property="shareButton" destination="tVx-jP-MQL" id="svo-Kz-V48"/>
@@ -814,5 +827,5 @@
         <image name="sendButton" width="23" height="23"/>
         <image name="shareButton" width="17" height="23"/>
     </resources>
-    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

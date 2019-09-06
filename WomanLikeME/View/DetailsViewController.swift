@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var fullPhraseLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet var myView: UIView!
     
     var modelId : Int?
     private var presenter: DetailsPresenter?
@@ -30,6 +31,9 @@ class DetailsViewController: UIViewController {
     }
     
     func inicialize(){
+        let down = UISwipeGestureRecognizer(target : self, action : #selector(self.downSwipe))
+        down.direction = .down
+        self.myView.addGestureRecognizer(down)
         presenter?.initNameLabel()
         presenter?.initAgeLabel()
         presenter?.initJobLabel()
@@ -37,6 +41,11 @@ class DetailsViewController: UIViewController {
         presenter?.initTextLabel()
         presenter?.initImage()
         presenter?.initFavorite()
+    }
+    
+    @objc
+    func downSwipe(){
+        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func onShare(_ sender: Any) {
@@ -49,7 +58,7 @@ class DetailsViewController: UIViewController {
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         
         // exclude some activity types from the list (optional)
-        //activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
         
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
@@ -58,6 +67,8 @@ class DetailsViewController: UIViewController {
     @IBAction func onFavorite(_ sender: Any) {
         presenter?.onFavorite()
     }
+    
+    
 }
 
 extension DetailsViewController : DetailsViewDelegate{
