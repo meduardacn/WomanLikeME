@@ -30,7 +30,8 @@ struct User{
         return listOfFavorited
     }
     mutating func initAllWoman(){
-        let w1 = Woman(name: "Bruna", date: "07/10/1998", carrer: "Estudante", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "DaniBraguini", phrase: "nunca vi ninguem", saved: false, id: 0)
+        allWoman.append(contentsOf: ReadingPList.sharedData.returningData() )
+        let w1 = Woman(name: "Bruna", date: "07/10/1998", carrer: "Estudante", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "DaniBraguini", phrase: "nunca vi ninguem", saved: true, id: 0)
         let w2 = Woman(name: "teste", date: "07/10/1998", carrer: "Estudante", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "DaniBraguini", phrase: "nunca vi ninguem", saved: true, id: 1)
         allWoman.append(w1)
         allWoman.append(w2)
