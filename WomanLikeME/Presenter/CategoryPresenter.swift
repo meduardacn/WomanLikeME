@@ -16,10 +16,10 @@ final class CategoryPresenter {
         self.view = view
        category = Category()
     }
-    func getLabel(index: Int) -> String {
+    func fecthLabel(index: Int) -> String {
         return category.categories[index]
     }
-    func getImage(index: Int) -> String {
+    func fecthImage(index: Int) -> String {
         return "category\(index)"
     }
 }

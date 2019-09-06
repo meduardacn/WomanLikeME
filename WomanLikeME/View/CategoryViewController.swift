@@ -48,8 +48,8 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         cell.backView.layer.shadowRadius = 6
         
         
-        cell.categoryImageView.image = UIImage(named: (presenter?.getImage(index: indexPath[1]))! )
-        cell.categoryLabel.text = presenter?.getLabel(index: indexPath[1])
+        cell.categoryImageView.image = UIImage(named: (presenter?.fecthImage(index: indexPath[1]))! )
+        cell.categoryLabel.text = presenter?.fecthLabel(index: indexPath[1])
         
         return cell
     }

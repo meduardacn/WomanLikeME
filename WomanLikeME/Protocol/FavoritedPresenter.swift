@@ -7,7 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-protocol FavoriteViewDelegate : class {
+protocol FavoriteViewDelegate : class , UITableViewDelegate, UITableViewDataSource{
     
 }

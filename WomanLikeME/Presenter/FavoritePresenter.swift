@@ -16,21 +16,24 @@ final class FavoritePresenter {
     required init(view: FavoriteViewDelegate){
         self.view = view
         model = Woman()
-        favoriteList = User.sharedService.getListOfFAvorite()
+        favoriteList = User.sharedService.fecthListOfFAvorite()
     }
     func reload(){
-        favoriteList = User.sharedService.getListOfFAvorite()
+        favoriteList = User.sharedService.fecthListOfFAvorite()
     }
-    func getName(index: Int) -> String{
+    func fecthId(index: Int) -> Int{
+        return favoriteList[index].id
+    }
+    func fecthName(index: Int) -> String{
         return favoriteList[index].name
     }
-    func getPhrase(index: Int) -> String{
+    func fecthPhrase(index: Int) -> String{
         return favoriteList[index].phrase
     }
-    func getImage(index: Int) -> String {
+    func fecthImage(index: Int) -> String {
         return favoriteList[index].image
     }
     func countFavorite()->Int{
-        return User.sharedService.getListOfFAvorite().count
+        return User.sharedService.fecthListOfFAvorite().count
     }
 }

@@ -21,6 +21,7 @@ class FavoriteViewControler: UIViewController {
         self.favoritesTableView.delegate = self
         
         presenter = FavoritePresenter(view: self)
+        
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
         
@@ -51,9 +52,10 @@ extension FavoriteViewControler: UITableViewDelegate, UITableViewDataSource {
         cell.backView.layer.shadowColor = UIColor.black.cgColor
         cell.backView.layer.shadowOpacity = 0.2
         cell.backView.layer.shadowOffset = CGSize(width: 2, height: 3)
-        cell.womanImageView.image = UIImage(named: (presenter?.getImage(index: indexPath[1]))!)
-        cell.womanNameLabel.text = presenter?.getName(index: indexPath[1])
-        cell.womanPhraseLabel.text = presenter?.getPhrase(index: indexPath[1])
+        cell.womanlId = presenter?.fecthId(index: indexPath[1])
+        cell.womanImageView.image = UIImage(named: (presenter?.fecthImage(index: indexPath[1]))!)
+        cell.womanNameLabel.text = presenter?.fecthName(index: indexPath[1])
+        cell.womanPhraseLabel.text = presenter?.fecthPhrase(index: indexPath[1])
         return cell
     }
     
@@ -62,4 +64,18 @@ extension FavoriteViewControler: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension FavoriteViewControler : FavoriteViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? FavoriteTableViewCell {
+            self.performSegue(withIdentifier: "details", sender: cell)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "details"{
+            if let dest = segue.destination as? DetailsViewController{
+                let cell = sender as? FavoriteTableViewCell
+                dest.modelId = cell?.womanlId
+            }
+        }
+    }
+    
 }

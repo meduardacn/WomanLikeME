@@ -33,6 +33,8 @@
 		606A6E14231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E15231EFD7500109063 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E13231EFD7500109063 /* HomeViewProtocol.swift */; };
 		606A6E182320512100109063 /* DateTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A6E172320512100109063 /* DateTransformation.swift */; };
+		60868EFF232297F60079D62E /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60868EFE232297F60079D62E /* DetailsPresenter.swift */; };
+		60868F01232298180079D62E /* DetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60868F00232298180079D62E /* DetailsProtocol.swift */; };
 		6094B1E52321FD2D00173459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601DC1BC231D922300004C4B /* Main.storyboard */; };
 		688E315123203D2F00D9B581 /* ReadingPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E315023203D2F00D9B581 /* ReadingPList.swift */; };
 		68C02C58232027D700396391 /* WomanLikeME.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68C02C57232027D700396391 /* WomanLikeME.plist */; };
@@ -91,6 +93,8 @@
 		606A6E0F231EF4E400109063 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		606A6E13231EFD7500109063 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
 		606A6E172320512100109063 /* DateTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransformation.swift; sourceTree = "<group>"; };
+		60868EFE232297F60079D62E /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		60868F00232298180079D62E /* DetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsProtocol.swift; sourceTree = "<group>"; };
 		654D739D52CCFCEFB91012B5 /* Pods-WomanLikeMEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WomanLikeMEUITests.debug.xcconfig"; path = "Target Support Files/Pods-WomanLikeMEUITests/Pods-WomanLikeMEUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		688E315023203D2F00D9B581 /* ReadingPList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingPList.swift; sourceTree = "<group>"; };
 		68C02C57232027D700396391 /* WomanLikeME.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WomanLikeME.plist; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 				606A6E0F231EF4E400109063 /* HomePresenter.swift */,
 				60678A2923217B8B00F032CA /* CategoryPresenter.swift */,
 				60678A2F23218D1200F032CA /* FavoritePresenter.swift */,
+				60868EFE232297F60079D62E /* DetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				606A6E13231EFD7500109063 /* HomeViewProtocol.swift */,
 				60678A2B23217C6A00F032CA /* CategoryViewProtocol.swift */,
 				60678A2D23218CC000F032CA /* FavoritedPresenter.swift */,
+				60868F00232298180079D62E /* DetailsProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				60678A2C23217C6A00F032CA /* CategoryViewProtocol.swift in Sources */,
 				60678A2E23218CC000F032CA /* FavoritedPresenter.swift in Sources */,
 				606A6E182320512100109063 /* DateTransformation.swift in Sources */,
+				60868EFF232297F60079D62E /* DetailsPresenter.swift in Sources */,
 				F225D8F8231F106000F31BCC /* FavoriteTableViewCell.swift in Sources */,
 				688E315123203D2F00D9B581 /* ReadingPList.swift in Sources */,
 				601DC1B9231D922300004C4B /* AppDelegate.swift in Sources */,
@@ -528,6 +535,7 @@
 				F225D8F6231F0ED800F31BCC /* FavoriteViewController.swift in Sources */,
 				F225D8FA2320A85600F31BCC /* CategoryViewController.swift in Sources */,
 				F225D8FE2320B4E900F31BCC /* Category.swift in Sources */,
+				60868F01232298180079D62E /* DetailsProtocol.swift in Sources */,
 				601DC1C1231D922300004C4B /* WomanLikeME.xcdatamodeld in Sources */,
 				F225D8FC2320A94500F31BCC /* CategoryCollectionViewCell.swift in Sources */,
 				606A6E14231EFD7500109063 /* HomeViewProtocol.swift in Sources */,

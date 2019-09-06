@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -570,10 +569,10 @@
             </objects>
             <point key="canvasLocation" x="-777" y="433"/>
         </scene>
-        <!--History-->
+        <!--Details-->
         <scene sceneID="PBg-nS-duS">
             <objects>
-                <viewController id="24p-8M-PN9" customClass="DetailsViewController" customModule="WomanLikeME" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="24p-8M-PN9" userLabel="Details" customClass="DetailsViewController" customModule="WomanLikeME" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" tag="-2" contentMode="scaleToFill" id="43R-9B-Pkv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -598,7 +597,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="onFavorite:" destination="24p-8M-PN9" eventType="touchUpInside" id="ISy-rU-OMh"/>
+                                            <action selector="onFavorite:" destination="24p-8M-PN9" eventType="touchUpInside" id="Iky-3y-4HJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVx-jP-MQL">
@@ -611,7 +610,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="onShare:" destination="24p-8M-PN9" eventType="touchUpInside" id="Q9T-FV-o9s"/>
+                                            <action selector="onShare:" destination="24p-8M-PN9" eventType="touchUpInside" id="YO2-go-aWf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -789,21 +788,19 @@
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="ageLabel" destination="jhC-P7-Io8" id="Nqr-C4-0gs"/>
-                        <outlet property="favoriteButton" destination="vzx-vg-2Rm" id="yZp-t3-nLm"/>
+                        <outlet property="favoriteButton" destination="vzx-vg-2Rm" id="7ue-Yc-o9g"/>
                         <outlet property="fullPhraseLabel" destination="gWU-7M-2pS" id="R9g-9H-gLj"/>
                         <outlet property="image" destination="hzr-1g-JsI" id="V4G-RP-7NU"/>
                         <outlet property="jobLabel" destination="VZ9-Ce-adU" id="1HZ-VM-d1H"/>
                         <outlet property="nameLabel" destination="j87-kM-AgY" id="P0h-Xt-R6k"/>
                         <outlet property="phraseLabel" destination="dWf-pI-qsm" id="Kdu-jU-jHk"/>
-                        <outlet property="phraseView" destination="Fdv-2W-U0Q" id="bze-xg-Yav"/>
-                        <outlet property="scrolView" destination="rDf-j8-FKV" id="Dd2-vQ-bE0"/>
-                        <outlet property="shareButton" destination="tVx-jP-MQL" id="Q1r-py-0eR"/>
+                        <outlet property="shareButton" destination="tVx-jP-MQL" id="svo-Kz-V48"/>
                         <outlet property="textLabel" destination="ciG-CU-v2W" id="pBy-Kl-B19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSI-ZQ-KRx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1493" y="-684"/>
+            <point key="canvasLocation" x="1492.753623188406" y="-684.375"/>
         </scene>
     </scenes>
     <resources>

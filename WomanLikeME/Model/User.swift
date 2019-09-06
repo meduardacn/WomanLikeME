@@ -26,12 +26,12 @@ struct User{
     mutating func deleteWoman(new: Woman){
         listOfFavorited.removeAll { $0.id == new.id }
     }
-    func getListOfFAvorite() -> [Woman] {
+    func fecthListOfFAvorite() -> [Woman] {
         return listOfFavorited
     }
     mutating func initAllWoman(){
         allWoman.append(contentsOf: ReadingPList.sharedData.returningData() )
-        let w1 = Woman(name: "felina", date: "07/10/1998", carrer: "Estudante", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "cat", phrase: "nunca vi ninguem", saved: false, id: 0)
+        let w1 = Woman(name: "felina", date: "07/10/1998", carrer: "Estudante", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "cat", phrase: "nunca vi ninguem", saved: true, id: 0)
         let w2 = Woman(name: "miau", date: "07/10/1998", carrer: "Dorminhoca", textAbout: "Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise. ", image: "cat", phrase: "nunca vi ninguem", saved: false, id: 1)
         allWoman.append(w1)
         allWoman.append(w2)

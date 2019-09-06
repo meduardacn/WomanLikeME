@@ -32,13 +32,12 @@ final class HomeViewController: UIViewController {
     }
     // MARK: Init Screen informations
     override func viewWillAppear(_ animated: Bool) {
-        image.image =  UIImage(named: "DaniBraguini")
         presenter?.initPhraseLabel()
         presenter?.initNameLabel()
         presenter?.initAgeLabel()
         presenter?.initJobLabel()
         presenter?.initTextLabel()
-        //presenter?.initImage()
+        presenter?.initImage()
         presenter?.initFavorite()
         
     }
