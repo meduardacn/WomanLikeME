@@ -11,14 +11,12 @@ import Foundation
 final class HomePresenter {
     private let view: HomeViewDelegate
     private var model : Woman
-    private var user : User
   
     var transform = DateTransformation()
     
     required init(view: HomeViewDelegate) {
         self.view = view
-        user = User()
-        model = user.womanOftheDay()
+        model = User.sharedService.womanOftheDay()
     }
 
     // MARK: Init IBOutlets
@@ -39,9 +37,7 @@ final class HomePresenter {
         view.setText(text: model.textAbout)
     }
     func initImage(){
-        if let data = Data(base64Encoded: model.image){
-            view.setImage(imageData: data)
-        }
+        view.setImage(imageStr: model.image)
     }
     func initFavorite(){
         if model.saved{
@@ -54,12 +50,13 @@ final class HomePresenter {
     func onFavorite(){
         if model.saved{
             model.saved = false
-            user.addWoman(new: model)
+            User.sharedService.deleteWoman(new: model)
+            
             view.setFavoriteImage(image: "favWhiteButton")
             
         }else{
             model.saved = true
-            user.deleteWoman(new: model)
+            User.sharedService.addWoman(new: model)
             view.setFavoriteImage(image: "favFullWhiteButton")
         }
     }

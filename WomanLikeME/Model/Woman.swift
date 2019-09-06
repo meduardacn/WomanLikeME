@@ -17,6 +17,8 @@ struct Woman {
     let image : String
     let phrase : String
     var saved : Bool
+    var appear : Bool
+    var dateAppear : String
     init(){
         self.id = 0
         self.name = ""
@@ -26,9 +28,9 @@ struct Woman {
         self.image = ""
         self.phrase = ""
         self.saved = false
+        self.appear = false
+        self.dateAppear = ""
     }
-    
-    
     
     init(name : String, date : String, carrer : String, textAbout : String, image : String, phrase : String, saved : Bool, id: Int) {
         self.name = name
@@ -39,5 +41,7 @@ struct Woman {
         self.phrase = phrase
         self.saved = saved
         self.id = id
+        self.appear = false
+        self.dateAppear = ""
     }
 }

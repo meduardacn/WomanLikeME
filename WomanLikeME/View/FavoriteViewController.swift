@@ -22,6 +22,11 @@ class FavoriteViewControler: UIViewController {
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
         favoritesTableView.bounces = false
+        favoritesTableView.reloadData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.reload()
+        favoritesTableView.reloadData()
     }
 }
 
@@ -33,8 +38,7 @@ extension FavoriteViewControler: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return favorites.count
-        return 10
+        return (presenter?.countFavorite())!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,7 +48,9 @@ extension FavoriteViewControler: UITableViewDelegate, UITableViewDataSource {
         cell.backView.layer.shadowColor = UIColor.black.cgColor
         cell.backView.layer.shadowOpacity = 0.2
         cell.backView.layer.shadowOffset = CGSize(width: 2, height: 3)
-        
+        cell.womanImageView.image = UIImage(named: (presenter?.getImage(index: indexPath[1]))!)
+        cell.womanNameLabel.text = presenter?.getName(index: indexPath[1])
+        cell.womanPhraseLabel.text = presenter?.getPhrase(index: indexPath[1])
         return cell
     }
     

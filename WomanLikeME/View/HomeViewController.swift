@@ -80,9 +80,8 @@ extension  HomeViewController : HomeViewDelegate {
     internal func setText(text: String) {
         textLabel.text = text
     }
-    internal func setImage(imageData: Data) {
-        image.image = UIImage(data: imageData)
-        
+    internal func setImage(imageStr: String) {
+        image.image =  UIImage(named: imageStr)
     }
     internal func setFavoriteImage(image: String){
         favoriteButton.setImage( UIImage(named: image), for: .normal)
